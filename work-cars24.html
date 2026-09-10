@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="Cars24 Australia: brand, growth and AI-enabled work, including a 31-second AI film taken from strategy to final cut and the character system it runs on.">
+<link rel="canonical" href="https://priya-rawal-portfolio.github.io/work-cars24.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Priya Rawal">
+<meta property="og:url" content="https://priya-rawal-portfolio.github.io/work-cars24.html">
+<meta property="og:title" content="Cars24 Australia — brand and growth work">
+<meta property="og:description" content="From strategy to final cut: a 31-second film, plus the character system that holds it together.">
+<meta property="og:image" content="https://priya-rawal-portfolio.github.io/priya-assets/cars24/poster.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Cars24 Australia — brand and growth work">
+<meta name="twitter:card" content="summary_large_image">
+<title>Cars24 Australia — Priya Rawal</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F6F6F6'/%3E%3Ctext x='16' y='24' font-size='24' text-anchor='middle' fill='%232B2B2B' font-family='Georgia,serif' font-style='italic'%3Ep%3C/text%3E%3C/svg%3E">
+<style>@font-face{font-family:"Editorial";src:url("priya-assets/fonts/editorial-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Editorial";src:url("priya-assets/fonts/editorial-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Apfel";src:url("priya-assets/fonts/apfel-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Apfel";src:url("priya-assets/fonts/apfel-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+:root{--canvas:#F6F6F6;--ink:#2B2B2B;--ink-80:rgba(43,43,43,.8);--ink-60:rgba(43,43,43,.6);
+ --ink-40:rgba(43,43,43,.4);--rule:rgba(43,43,43,.16);--accent:#1B31E0;--chrome-1:#FFFFFF;--chrome-2:#DFE3E9;--chrome-3:#9AA2AD;--chrome-4:#F2F4F7;
+ --serif:"Editorial",Georgia,serif;--sans:"Apfel",-apple-system,sans-serif;--pad:clamp(20px,3.4vw,48px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--sans);font-size:14px;
+ line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+[hidden]{display:none!important}
+::selection{background:var(--accent);color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+
+.topnav{position:sticky;top:0;z-index:60;display:flex;justify-content:space-between;align-items:center;
+ padding:19px var(--pad);background:rgba(246,246,246,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.topnav a{font-size:13px;text-transform:uppercase;color:var(--ink-80)}
+.topnav .mark{font-family:var(--serif);font-style:italic;font-size:24px;letter-spacing:-.03em;text-transform:none;color:var(--ink)}
+
+/* ── stage: hero above, carousel below ── */
+.stage{min-height:calc(100svh - 62px);display:flex;flex-direction:column;overflow-x:clip}
+.stage-head{flex-shrink:0;text-align:center;padding:clamp(38px,6vw,78px) var(--pad) clamp(24px,3vw,40px)}
+.stage-head .marker{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:clamp(18px,2.2vw,28px)}
+.stage-head .marker i{display:block;width:26px;height:1px;background:var(--ink-40)}
+.stage-head .marker .n{font-family:var(--serif);font-style:italic;font-size:13px;line-height:1}
+.stage-head .marker .s{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-60)}
+.stage-head h1{font-family:var(--serif);font-weight:400;margin:0;
+ font-size:clamp(40px,7vw,96px);line-height:1.0;letter-spacing:-.045em}
+.stage-head .lede{margin:clamp(16px,2vw,24px) auto 0;max-width:52ch;font-size:15px;line-height:1.55;color:var(--ink-80)}
+.stage-head .facts{margin-top:clamp(16px,2vw,24px);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-40)}
+
+/* ── carousel ──
+   touch-action:pan-y hands vertical gestures straight to the browser and every
+   horizontal pixel to us, so the rail can start moving on the first pointermove
+   with no threshold and no axis-lock delay. */
+.rail{position:relative;flex:1;width:100%;cursor:grab;user-select:none;overflow:visible;
+ perspective:1200px;perspective-origin:50% 45%;min-height:330px;touch-action:pan-y}
+.rail.grabbing{cursor:grabbing}
+.card{position:absolute;top:50%;left:50%;will-change:transform;
+ border-radius:14px;overflow:hidden;background:#E9E7E3;
+ backface-visibility:hidden;contain:layout paint style}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+ -webkit-user-drag:none;user-select:none}
+@media (hover:hover) and (pointer:fine){
+  .card img{transition:transform .7s ease-out}
+  .card:hover img{transform:scale(1.04)}
+}
+.card .scrim{position:absolute;inset:0;pointer-events:none;
+ background:linear-gradient(to top,rgba(0,0,0,.62) 0%,rgba(0,0,0,.22) 26%,transparent 52%)}
+.card .ring{position:absolute;inset:0;pointer-events:none;border-radius:14px;
+ box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+/* no backdrop-filter here: eight blurring layers on a rotating rail is the single
+   most expensive thing on a phone and it made the drag stutter. */
+.card .tag{position:absolute;top:12px;left:12px;border-radius:100px;padding:5px 11px;
+ font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;
+ background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.16)}
+.card .foot{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;
+ display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.card .t{font-family:var(--serif);font-size:1.22rem;line-height:1.08;color:#fff;letter-spacing:-.02em}
+.card .n{font-family:var(--serif);font-size:1.5rem;line-height:1;color:rgba(255,255,255,.72)}
+.railhint{flex-shrink:0;text-align:center;padding:0 var(--pad) clamp(22px,3vw,34px);
+ font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-40)}
+
+/* ── modal ──
+   The panel is a flow-layout column and the image is width:100%/height:auto, so the
+   frame always takes the exact shape of the picture inside it. No letterboxing. */
+.backdrop{position:fixed;inset:0;z-index:98;background:rgba(20,20,19,.62);backdrop-filter:blur(6px);
+ opacity:0;pointer-events:none;transition:opacity .35s ease}
+.backdrop.on{opacity:1;pointer-events:auto}
+.modal{position:fixed;z-index:99;left:50%;top:50%;
+ width:min(1080px,calc(100vw - 28px));max-height:calc(100svh - 36px);
+ display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:var(--canvas);
+ box-shadow:0 40px 80px rgba(43,43,43,.35),0 4px 12px rgba(43,43,43,.15);
+ opacity:0;pointer-events:none;transform:translate(-50%,-50%) scale(.96);
+ transition:opacity .3s ease,transform .3s cubic-bezier(.22,1,.36,1)}
+.modal.on{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+.modal .mimg{flex:0 0 auto;position:relative;line-height:0;background:var(--canvas)}
+.modal .mimg img{display:block;width:100%;height:auto}
+.modal .mbody{flex:0 1 auto;overflow:auto;padding:clamp(16px,2.2vw,28px);
+ display:flex;flex-direction:column;gap:8px;background:var(--canvas);border-top:1px solid var(--rule)}
+.modal .mtag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-40)}
+.modal h2{font-family:var(--serif);font-weight:400;margin:0;font-size:clamp(22px,2.6vw,34px);
+ line-height:1.05;letter-spacing:-.04em}
+.modal p{margin:0;font-size:14px;line-height:1.55;color:var(--ink-80);max-width:66ch}
+.modal .close{position:absolute;top:12px;right:12px;z-index:10;width:34px;height:34px;border:0;
+ border-radius:100px;background:rgba(20,20,19,.42);backdrop-filter:blur(8px);color:#fff;
+ display:grid;place-items:center;cursor:pointer}
+.navbtn{position:fixed;z-index:99;width:42px;height:42px;border:0;border-radius:100px;cursor:pointer;
+ background:rgba(246,246,246,.86);backdrop-filter:blur(8px);border:1px solid var(--rule);
+ color:var(--ink);display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.navbtn.on{opacity:1;pointer-events:auto}
+.navbtn:hover{background:#fff}
+
+.endnav{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--rule)}
+.endnav a{padding:clamp(30px,4vw,58px) var(--pad);display:flex;flex-direction:column;gap:9px;
+ border-left:1px solid var(--rule);margin-left:-1px}
+.endnav .k{font-size:12px;text-transform:uppercase;color:var(--ink-60)}
+.endnav .v{font-family:var(--serif);font-size:clamp(24px,2.8vw,38px);line-height:1;letter-spacing:-.04em}
+.endnav a:hover .v{font-style:italic}
+.colophon{padding:22px var(--pad) 36px;text-align:center;font-size:12px;text-transform:uppercase;color:var(--ink-60)}
+@media (max-width:760px){.endnav{grid-template-columns:1fr}.rail{perspective:800px;min-height:250px}}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* ── large screens ─────────────────────────────────────────
+   The rail was 3840x928 holding 269px cards, and the stage reserved a
+   full viewport height for them. */
+@media (min-width:1921px){
+  .stage{min-height:0}
+  .rail{flex:0 0 auto;height:clamp(560px,52vh,900px)}
+  .stage-head h1{font-size:clamp(96px,calc(3.125vw + 36px),156px)}
+  .stage-head .lede{max-width:56ch;font-size:clamp(15px,calc(.375vw + 9.6px),24px)}
+  .stage-head .facts{font-size:clamp(11px,calc(.1667vw + 8.6px),15px)}
+  .topnav a{font-size:clamp(13px,calc(.1667vw + 10.6px),17px)}
+  .topnav .mark{font-size:clamp(24px,calc(.3333vw + 19.2px),32px)}
+  .modal{width:min(1480px,calc(100vw - 28px))}
+  .endnav .v{font-size:clamp(38px,calc(1.04vw + 18px),68px)}
+}
+</style>
+</head>
+<body>
+<header class="topnav">
+  <a href="index.html">← All work</a>
+  <a class="mark" href="index.html">priya rawal</a>
+</header>
+
+<section class="stage">
+  <div class="stage-head">
+    <div class="marker"><i></i><span class="n">nº 01</span><span class="s">Brand · Growth · AI Systems</span><i></i></div>
+    <h1>Cars24 Australia</h1>
+    <p class="lede">Brand, growth marketing and AI-enabled creative operations — including a 31-second film built end to end, from strategy to final cut.</p>
+    <p class="facts">7 pieces · 2026 · film, character system, art direction</p>
+  </div>
+
+  <div class="rail" id="rail">
+    <article class="card" data-i="0">
+      <img src="priya-assets/cars24/beat-1-diner.jpg" alt="Diner Hook" loading="eager" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Film</span>
+      <span class="foot"><span class="t">Diner Hook</span><span class="n">01</span></span>
+    </article>
+    <article class="card" data-i="1">
+      <img src="priya-assets/cars24/beat-3-overload.jpg" alt="Option Overload" loading="eager" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Film</span>
+      <span class="foot"><span class="t">Option Overload</span><span class="n">02</span></span>
+    </article>
+    <article class="card" data-i="2">
+      <img src="priya-assets/cars24/beat-2-swipe.jpg" alt="Choice Swipe" loading="eager" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Film</span>
+      <span class="foot"><span class="t">Choice Swipe</span><span class="n">03</span></span>
+    </article>
+    <article class="card" data-i="3">
+      <img src="priya-assets/cars24/beat-4-claim.jpg" alt="30 Day Return" loading="eager" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Claim</span>
+      <span class="foot"><span class="t">30 Day Return</span><span class="n">04</span></span>
+    </article>
+    <article class="card" data-i="4">
+      <img src="priya-assets/cars24/beat-5-ease.jpg" alt="Mind at Ease" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Film</span>
+      <span class="foot"><span class="t">Mind at Ease</span><span class="n">05</span></span>
+    </article>
+    <article class="card" data-i="5">
+      <img src="priya-assets/cars24/chloe.jpg" alt="Character Anchor" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">System</span>
+      <span class="foot"><span class="t">Character Anchor</span><span class="n">06</span></span>
+    </article>
+    <article class="card" data-i="6">
+      <img src="priya-assets/cars24/moodboard.jpg" alt="Design Ingredients" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Direction</span>
+      <span class="foot"><span class="t">Design Ingredients</span><span class="n">07</span></span>
+    </article>
+    <article class="card" data-i="7" aria-hidden="true">
+      <img src="priya-assets/cars24/beat-1-diner.jpg" alt="Diner Hook" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Film</span>
+      <span class="foot"><span class="t">Diner Hook</span><span class="n">01</span></span>
+    </article>
+    <article class="card" data-i="8" aria-hidden="true">
+      <img src="priya-assets/cars24/beat-3-overload.jpg" alt="Option Overload" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Film</span>
+      <span class="foot"><span class="t">Option Overload</span><span class="n">02</span></span>
+    </article>
+    <article class="card" data-i="9" aria-hidden="true">
+      <img src="priya-assets/cars24/beat-2-swipe.jpg" alt="Choice Swipe" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Film</span>
+      <span class="foot"><span class="t">Choice Swipe</span><span class="n">03</span></span>
+    </article>
+    <article class="card" data-i="10" aria-hidden="true">
+      <img src="priya-assets/cars24/beat-4-claim.jpg" alt="30 Day Return" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Claim</span>
+      <span class="foot"><span class="t">30 Day Return</span><span class="n">04</span></span>
+    </article>
+    <article class="card" data-i="11" aria-hidden="true">
+      <img src="priya-assets/cars24/beat-5-ease.jpg" alt="Mind at Ease" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Film</span>
+      <span class="foot"><span class="t">Mind at Ease</span><span class="n">05</span></span>
+    </article>
+    <article class="card" data-i="12" aria-hidden="true">
+      <img src="priya-assets/cars24/chloe.jpg" alt="Character Anchor" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">System</span>
+      <span class="foot"><span class="t">Character Anchor</span><span class="n">06</span></span>
+    </article>
+    <article class="card" data-i="13" aria-hidden="true">
+      <img src="priya-assets/cars24/moodboard.jpg" alt="Design Ingredients" loading="lazy" decoding="async">
+      <span class="scrim"></span><span class="ring"></span>
+      <span class="tag">Direction</span>
+      <span class="foot"><span class="t">Design Ingredients</span><span class="n">07</span></span>
+    </article>
+  </div>
+  <p class="railhint">Drag, scroll or swipe · click a card to open it</p>
+</section>
+
+<div class="backdrop" id="backdrop"></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Work detail">
+  <button class="close" aria-label="Close">
+    <svg viewBox="0 0 14 14" width="14" height="14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5"/></svg>
+  </button>
+  <div class="mimg"><img alt="" hidden></div>
+  <div class="mbody"><span class="mtag"></span><h2></h2><p></p></div>
+</div>
+<button class="navbtn" id="prev" aria-label="Previous">
+  <svg viewBox="0 0 16 16" width="16" height="16" fill="none"><path d="M10 2L4 8l6 6" stroke="currentColor" stroke-width="1.8"/></svg>
+</button>
+<button class="navbtn" id="next" aria-label="Next">
+  <svg viewBox="0 0 16 16" width="16" height="16" fill="none"><path d="M6 2l6 6-6 6" stroke="currentColor" stroke-width="1.8"/></svg>
+</button>
+
+<nav class="endnav">
+  <a href="index.html"><span class="k">← Back to</span><span class="v">All work</span></a>
+  <a href="work-noise.html"><span class="k">Next</span><span class="v">Noise</span></a>
+</nav>
+<p class="colophon">(© 2026 Priya Rawal)</p>
+
+<script>window.__CARDS = [{"img": "priya-assets/cars24/beat-1-diner.jpg", "full": "priya-assets/cars24/beat-1-diner.jpg", "title": "Diner Hook", "tag": "Film", "caption": "The opening three seconds — two milkshakes, one person, and a decision that should be trivial. The hook that names indecision before it sells anything."}, {"img": "priya-assets/cars24/beat-3-overload.jpg", "full": "priya-assets/cars24/beat-3-overload.jpg", "title": "Option Overload", "tag": "Film", "caption": "Car listings crowd the living room until the space itself is unusable. The pressure peaks here, right before the claim lands."}, {"img": "priya-assets/cars24/beat-2-swipe.jpg", "full": "priya-assets/cars24/beat-2-swipe.jpg", "title": "Choice Swipe", "tag": "Film", "caption": "Outfit changes standing in for decision fatigue — the cutting speeds up as the certainty drops."}, {"img": "priya-assets/cars24/beat-4-claim.jpg", "full": "priya-assets/cars24/beat-4-claim.jpg", "title": "30 Day Return", "tag": "Claim", "caption": "The claim arrives as emotional relief rather than a feature list — permission to change your mind."}, {"img": "priya-assets/cars24/beat-5-ease.jpg", "full": "priya-assets/cars24/beat-5-ease.jpg", "title": "Mind at Ease", "tag": "Film", "caption": "The decision becomes movement. No celebration, no hard sell — just someone who can finally go."}, {"img": "priya-assets/cars24/chloe.jpg", "full": "priya-assets/cars24/chloe.jpg", "title": "Character Anchor", "tag": "System", "caption": "One locked identity carried across every shot, so a generated film reads as one person in one world rather than five."}, {"img": "priya-assets/cars24/moodboard.jpg", "full": "priya-assets/cars24/moodboard.jpg", "title": "Design Ingredients", "tag": "Direction", "caption": "The moodboard that translated each emotional beat into a visual rule before a single frame was generated."}];</script>
+<script>(() => {
+  const rail = document.getElementById('rail');
+  const cards = [...rail.querySelectorAll('.card')];
+  const N = cards.length;
+  if (!N) return;
+  const calm = matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  const size = () => {
+    const w = innerWidth;
+    if (w < 640)  return {cw: 268, ch: 168, rot: 8,  z: -60,  sc: .25};
+    if (w < 1024) return {cw: 340, ch: 213, rot: 14, z: -110, sc: .32};
+    if (w < 1921) return {cw: 430, ch: 269, rot: 14, z: -120, sc: .35};
+    if (w < 3000) return {cw: 560, ch: 350, rot: 14, z: -160, sc: .35};
+    return              {cw: 720, ch: 450, rot: 14, z: -210, sc: .35};
+  };
+  let S = size();
+  let GAP = Math.round(S.cw * .051);
+  const FRICTION = .94, SNAP = .05, AUTO = .42, AUTO_DELAY = 2200, MAXVEL = 48;
+  let stride = S.cw + GAP, total = N * stride;
+
+  // Per-card cache. Width/height/z-index/shadow are written only when they actually
+  // change -- the old build re-wrote all of them 60x a second, which forced a layout
+  // and a repaint on every frame and is what made the rail feel heavy to push.
+  const st = cards.map(() => ({z: -999, sh: -1, o: -1}));
+  const sizeCards = () => cards.forEach(c => {
+    c.style.width = S.cw + 'px'; c.style.height = S.ch + 'px';
+  });
+  sizeCards();
+
+  let scrollX = 0, vel = 0, target = null, paused = false;
+  let lastMove = 0, dirty = true, entrance = 0, entranceDone = false, prevT = 0;
+  const ENTER = 0.4, STAGGER = 0.03;
+  const enterEnd = ENTER + ((N - 1) / 2) * STAGGER + 0.05;
+
+  const apply = () => {
+    const half = total / 2, mid = (N - 1) / 2;
+    for (let i = 0; i < N; i++) {
+      let p = i * stride - scrollX;
+      p = ((p % total) + total * 1.5) % total - half;
+      const dn = p / (stride * 1.85);
+      const ad = Math.min(Math.abs(dn), 1.5);
+      const tz = ad * S.z;
+      const sc = 1 - ad * S.sc;
+      const prog = entranceDone ? 1
+        : Math.max(0, Math.min((entrance - Math.abs(i - mid) * STAGGER) / ENTER, 1));
+      const ease = 1 - Math.pow(1 - prog, 4);
+      const c = cards[i], s = st[i];
+      c.style.transform =
+        'translate3d(' + (p - S.cw / 2).toFixed(1) + 'px,' +
+        (-S.ch / 2 + (1 - ease) * 44).toFixed(1) + 'px,' + tz.toFixed(1) + 'px)' +
+        ' rotateY(' + (-dn * S.rot).toFixed(2) + 'deg)' +
+        ' scale(' + (sc * (0.95 + ease * 0.05)).toFixed(3) + ')';
+      const o = +ease.toFixed(2);
+      if (o !== s.o) { c.style.opacity = o; s.o = o; }
+      const z = Math.round((1 - ad) * 100);
+      if (z !== s.z) { c.style.zIndex = z; s.z = z; }
+      const sh = ad < .3 ? 1 : 0;
+      if (sh !== s.sh) {
+        c.style.boxShadow = sh ? '0 26px 52px rgba(43,43,43,.22)'
+                               : '0 14px 30px rgba(43,43,43,.13)';
+        s.sh = sh;
+      }
+    }
+  };
+
+  // Everything below is time-based rather than frame-based, so a 120Hz iPhone and a
+  // 60Hz laptop decay and drift at the same speed.
+  const frame = (now) => {
+    requestAnimationFrame(frame);
+    if (!prevT) prevT = now;
+    const ms = now - prevT; prevT = now;
+    const dt = Math.min(ms / 16.667, 3);
+
+    if (!entranceDone) {
+      entrance += ms / 1000;
+      if (entrance >= enterEnd) entranceDone = true;
+      dirty = true;
+    }
+
+    if (target !== null) {
+      scrollX += (target - scrollX) * (1 - Math.pow(0.86, dt));
+      if (Math.abs(target - scrollX) < 0.4) { scrollX = target; target = null; }
+      dirty = true;
+    } else if (!drag.on && !paused) {
+      if (Math.abs(vel) > 0.02) {
+        scrollX += vel * dt;
+        vel *= Math.pow(FRICTION, dt);
+        dirty = true;
+      } else vel = 0;
+      const idle = now - lastMove;
+      if (Math.abs(vel) < 1.2 && idle < AUTO_DELAY) {
+        const d = Math.round(scrollX / stride) * stride - scrollX;
+        if (Math.abs(d) > 0.3) { vel += d * SNAP * dt; dirty = true; }
+      }
+      if (idle > AUTO_DELAY && Math.abs(vel) < 0.35 && !calm) { scrollX += AUTO * dt; dirty = true; }
+    }
+
+    if (dirty) { apply(); dirty = false; }
+  };
+
+  // ── input ──────────────────────────────────────────────────
+  // One pointer path for mouse, trackpad and finger. Because the rail is
+  // touch-action:pan-y the browser keeps vertical scrolling and gives us every
+  // horizontal pixel, so there is no threshold to cross before the rail moves:
+  // the first pointermove already drags it.
+  const drag = {on: false, id: null, lastX: 0, lastT: 0, dist: 0, suppress: false};
+
+  rail.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    drag.on = true; drag.id = e.pointerId; drag.lastX = e.clientX;
+    drag.lastT = e.timeStamp; drag.dist = 0;
+    vel = 0; target = null; lastMove = performance.now();
+    rail.classList.add('grabbing');
+    if (e.pointerType === 'mouse') e.preventDefault();
+  });
+
+  addEventListener('pointermove', e => {
+    if (!drag.on || e.pointerId !== drag.id) return;
+    const dx = e.clientX - drag.lastX;
+    if (!dx) return;
+    const dt = Math.max(e.timeStamp - drag.lastT, 6);
+    scrollX -= dx;
+    drag.dist += Math.abs(dx);
+    // blend rather than replace: one coalesced event carrying a big jump shouldn't
+    // decide the whole fling.
+    const inst = Math.max(-MAXVEL, Math.min(MAXVEL, (-dx / dt) * 16));
+    vel = vel * 0.35 + inst * 0.65;
+    drag.lastX = e.clientX; drag.lastT = e.timeStamp;
+    lastMove = performance.now(); dirty = true;
+  });
+
+  const endDrag = cancelled => {
+    if (!drag.on) return;
+    drag.on = false; drag.id = null;
+    rail.classList.remove('grabbing');
+    if (cancelled) vel = 0;
+    if (drag.dist > 5) { drag.suppress = true; setTimeout(() => { drag.suppress = false; }, 80); }
+    lastMove = performance.now();
+  };
+  addEventListener('pointerup', () => endDrag(false));
+  addEventListener('pointercancel', () => endDrag(true));
+  rail.addEventListener('dragstart', e => e.preventDefault());
+
+  rail.addEventListener('wheel', e => {
+    const ax = Math.abs(e.deltaX), ay = Math.abs(e.deltaY);
+    if (ax < 0.4 || ax < ay * 0.6) return;   // clearly vertical: let the page scroll
+    e.preventDefault();
+    target = null;
+    scrollX += e.deltaX;
+    vel = e.deltaX * 0.15;                   // macOS sends its own momentum deltas
+    lastMove = performance.now(); dirty = true;
+  }, {passive: false});
+
+  addEventListener('resize', () => {
+    S = size(); GAP = Math.round(S.cw * .051); stride = S.cw + GAP; total = N * stride;
+    sizeCards(); st.forEach(s => { s.z = -999; s.sh = -1; s.o = -1; });
+    dirty = true;
+  });
+
+  // ── modal ──────────────────────────────────────────────────
+  const backdrop = document.getElementById('backdrop');
+  const modal = document.getElementById('modal');
+  const mwrap = modal.querySelector('.mimg');
+  const mimg = mwrap.querySelector('img');
+  const mbody = modal.querySelector('.mbody');
+  const mtag = modal.querySelector('.mtag');
+  const mh = modal.querySelector('h2');
+  const mp = modal.querySelector('p');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const DATA = window.__CARDS;
+  let active = -1;
+
+  // Fit the panel to the picture instead of the picture to the panel: pick the
+  // width at which image height + caption height still clears the viewport, then
+  // let height:auto give the image its exact aspect ratio. Nothing is letterboxed.
+  const layout = () => {
+    const maxW = Math.min(innerWidth - 28, 1480);
+    const maxH = innerHeight - 36;
+    const A = (mimg.naturalWidth && mimg.naturalHeight)
+      ? mimg.naturalWidth / mimg.naturalHeight : 1.6;
+    let w = Math.min(maxW, mimg.naturalWidth || maxW);
+    w = Math.max(w, Math.min(maxW, 260));
+    modal.style.width = w + 'px';
+    for (let k = 0; k < 4; k++) {
+      const bodyH = mbody.offsetHeight;
+      if (w / A + bodyH <= maxH) break;
+      const nw = Math.max(Math.min(maxW, 240), (maxH - bodyH) * A);
+      if (Math.abs(nw - w) < 1) break;
+      w = Math.min(nw, maxW);
+      modal.style.width = w + 'px';
+    }
+
+    const r = modal.getBoundingClientRect();
+    if (innerWidth >= 768) {                       // outside the panel
+      prev.style.left = Math.max(8, r.left - 54) + 'px';
+      next.style.left = Math.min(innerWidth - 50, r.right + 12) + 'px';
+      prev.style.top = next.style.top = (r.top + r.height / 2 - 21) + 'px';
+    } else if (innerHeight - r.bottom >= 62) {     // in the clear space beneath it
+      prev.style.left = (innerWidth / 2 - 52) + 'px';
+      next.style.left = (innerWidth / 2 + 10) + 'px';
+      prev.style.top = next.style.top = (r.bottom + 14) + 'px';
+    } else {                                       // no room: ride the picture edges
+      const ir = mwrap.getBoundingClientRect();
+      prev.style.left = (ir.left + 10) + 'px';
+      next.style.left = (ir.right - 52) + 'px';
+      prev.style.top = next.style.top = (ir.top + ir.height / 2 - 21) + 'px';
+    }
+  };
+
+  const fit = () => { layout(); mwrap.style.visibility = 'visible'; };
+  mimg.addEventListener('load', fit);
+  mimg.addEventListener('error', fit);
+
+  const show = (i, slide) => {
+    active = ((i % N) + N) % N;
+    const d = DATA[active];
+    mtag.textContent = '(' + d.tag + ')';
+    mh.textContent = d.title;
+    mp.textContent = d.caption;
+    const src = d.full || d.img;
+    if (mimg.getAttribute('src') !== src) {
+      mwrap.style.visibility = 'hidden';
+      mimg.alt = d.title;
+      mimg.hidden = false;
+      mimg.setAttribute('src', src);
+      if (mimg.complete && mimg.naturalWidth) fit();
+    } else {
+      fit();
+    }
+    backdrop.classList.add('on'); modal.classList.add('on');
+    prev.classList.add('on'); next.classList.add('on');
+    paused = true;
+    if (slide) target = active * stride;
+  };
+  const hide = () => {
+    backdrop.classList.remove('on'); modal.classList.remove('on');
+    prev.classList.remove('on'); next.classList.remove('on');
+    paused = false; active = -1;
+    lastMove = performance.now(); dirty = true;
+  };
+
+  cards.forEach((c, i) => c.addEventListener('click', () => {
+    if (drag.suppress) return;
+    show(i % DATA.length, true);
+  }));
+  backdrop.addEventListener('click', hide);
+  modal.querySelector('.close').addEventListener('click', hide);
+  prev.addEventListener('click', () => show(active - 1, true));
+  next.addEventListener('click', () => show(active + 1, true));
+  addEventListener('keydown', e => {
+    if (active < 0) return;
+    if (e.key === 'Escape') hide();
+    if (e.key === 'ArrowLeft') show(active - 1, true);
+    if (e.key === 'ArrowRight') show(active + 1, true);
+  });
+  addEventListener('resize', () => { if (active >= 0) layout(); });
+
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

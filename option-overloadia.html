@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="A 31-second brand film for Cars24 Australia, generated frame by frame: the five-beat cure arc, the locked Soul Character and the prompt system behind them.">
+<link rel="canonical" href="https://priya-rawal-portfolio.github.io/option-overloadia.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Priya Rawal">
+<meta property="og:url" content="https://priya-rawal-portfolio.github.io/option-overloadia.html">
+<meta property="og:title" content="Option Overloadia — every frame generated">
+<meta property="og:description" content="Compare, reopen, doubt, delay: the car buyer&#x27;s loop, named and cured in 31 seconds.">
+<meta property="og:image" content="https://priya-rawal-portfolio.github.io/priya-assets/cars24/poster.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Option Overloadia — every frame generated">
+<meta name="twitter:card" content="summary_large_image">
+<title>Option Overloadia — Cars24 brand film</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%234736FE'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='%23F3F2EA' font-family='Helvetica,Arial' font-weight='bold'%3EO%3C/text%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Geist";src:url("priya-assets/fonts/geist-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"GeistMono";src:url("priya-assets/fonts/geistmono-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Editorial";src:url("priya-assets/fonts/editorial-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+
+:root{
+  /* project palette */
+  --cream:#F3F2EA;
+  --paper:#FBFBF5;
+  --blue:#4736FE;
+  --red:#FF4E57;
+  --dark:#252523;
+  --black:#0B0B0A;
+  --grey:#6B6A66;
+  --amber:#F8C048;
+  --lilac:#B8A3FF;
+  --mint:#73F7B0;
+  --sans:"Geist",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;
+  --mono:"GeistMono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --pad:clamp(20px,5vw,80px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--dark);
+  font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+[hidden]{display:none!important}
+::selection{background:var(--blue);color:#fff}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* ── deck devices ─────────────────────────────────────────── */
+.tag{display:inline-block;background:var(--blue);color:var(--paper);
+  font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+  padding:8px 14px;border-radius:7px}
+.tag.red{background:var(--red)}
+.tag.dark{background:var(--dark)}
+.tag.ghost{background:transparent;color:var(--grey);border:1px solid rgba(37,37,35,.24)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.035em;line-height:.98;text-wrap:balance}
+h1{font-size:clamp(44px,7.4vw,104px);font-weight:800;letter-spacing:-.045em}
+h2{font-size:clamp(34px,4.9vw,68px)}
+h3{font-size:clamp(21px,2.1vw,30px);letter-spacing:-.02em}
+p{margin:0}
+.lead{font-size:clamp(17px,1.5vw,21px);line-height:1.5;color:var(--grey);max-width:52ch}
+.lead b{color:var(--dark);font-weight:600}
+
+/* dark section footer bar, like every deck slide */
+.bar{display:flex;align-items:stretch;background:var(--dark);color:var(--paper);
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+.bar .num{background:var(--red);color:var(--paper);padding:14px 20px;font-weight:600}
+.bar .lbl{padding:14px 20px;opacity:.86;flex:1}
+.bar .brand{padding:14px 20px;display:flex;gap:12px;align-items:center;opacity:.86}
+
+section{position:relative}
+.pad{padding:clamp(56px,7vw,110px) var(--pad)}
+
+/* ── top nav ──────────────────────────────────────────────── */
+.topnav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+  gap:16px;padding:14px var(--pad);background:rgba(243,242,234,.86);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(37,37,35,.12)}
+.topnav .back{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;
+  letter-spacing:.12em;text-transform:uppercase}
+.topnav .back svg{width:13px;height:13px;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.topnav .back:hover svg{transform:translateX(-4px)}
+.topnav .who{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+.topnav .who em{font-family:"Editorial",Georgia,serif;font-style:italic;font-size:17px;letter-spacing:-.02em;color:var(--dark);text-transform:none}
+
+/* ── hero: the deck's split ───────────────────────────────── */
+.hero{display:grid;grid-template-columns:56% 44%;min-height:min(88vh,860px);border-bottom:1px solid rgba(37,37,35,.12)}
+.hero-l{padding:clamp(40px,5.4vw,84px) var(--pad);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:clamp(22px,3vw,38px)}
+.hero-l h1 span{color:var(--blue)}
+.hero-r{position:relative;background:var(--blue);overflow:hidden;display:grid;place-items:center;min-height:340px}
+.blob{position:absolute;width:62%;aspect-ratio:.74/1;background:var(--red);border-radius:46% 54% 50% 50%/40% 38% 62% 60%;
+  top:9%;left:26%}
+.disc{position:relative;z-index:2;width:64%;aspect-ratio:1;border-radius:50%;background:var(--cream);
+  display:grid;place-items:center;text-align:center;padding:8%}
+.disc .a{font-size:clamp(21px,2.5vw,34px);font-weight:700;letter-spacing:-.03em;line-height:1.05}
+.disc .b{font-family:var(--mono);font-size:clamp(12px,1.2vw,16px);color:var(--red);margin-top:12px;letter-spacing:.02em}
+.seal{position:absolute;z-index:3;top:7%;right:7%;width:clamp(74px,8.4vw,116px);aspect-ratio:1;background:var(--blue);
+  display:grid;place-items:center;text-align:center;color:var(--paper);
+  font-family:var(--mono);font-size:clamp(9px,.86vw,11.5px);font-weight:600;line-height:1.25;letter-spacing:.09em;
+  clip-path:polygon(50.0% 0.0%,56.1% 7.4%,64.1% 2.0%,67.9% 10.9%,77.0% 7.9%,78.2% 17.5%,87.8% 17.3%,86.2% 26.8%,95.5% 29.2%,91.3% 37.9%,99.5% 42.9%,93.0% 50.0%,99.5% 57.1%,91.3% 62.1%,95.5% 70.8%,86.2% 73.2%,87.8% 82.7%,78.2% 82.5%,77.0% 92.1%,67.9% 89.1%,64.1% 98.0%,56.1% 92.6%,50.0% 100.0%,43.9% 92.6%,35.9% 98.0%,32.1% 89.1%,23.0% 92.1%,21.8% 82.5%,12.2% 82.7%,13.8% 73.2%,4.5% 70.8%,8.7% 62.1%,0.5% 57.1%,7.0% 50.0%,0.5% 42.9%,8.7% 37.9%,4.5% 29.2%,13.8% 26.8%,12.2% 17.3%,21.8% 17.5%,23.0% 7.9%,32.1% 10.9%,35.9% 2.0%,43.9% 7.4%)}
+
+/* ── meta strip ───────────────────────────────────────────── */
+/* flex-wrap, not grid: 5 items in a grid always leave an empty cell on some
+   breakpoint, and the 1px-gap background shows through it as a grey block. */
+.meta{display:flex;flex-wrap:wrap;background:var(--cream);
+  border-bottom:1px solid rgba(37,37,35,.12);overflow:hidden}
+.meta div{flex:1 1 200px;padding:22px 28px;
+  border-left:1px solid rgba(37,37,35,.14);margin-left:-1px}
+.meta div:first-child{padding-left:var(--pad)}
+.meta dt{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey);margin-bottom:7px}
+.meta dd{margin:0;font-size:15px;font-weight:500;line-height:1.4}
+
+/* ── film ─────────────────────────────────────────────────── */
+.film{background:var(--black);padding:clamp(28px,4vw,64px) clamp(16px,4vw,64px) clamp(36px,4.6vw,72px)}
+.film-head{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:22px}
+.film-head .mono{color:rgba(251,251,245,.62)}
+.film-wrap{position:relative;max-width:1320px;margin:0 auto;background:#000;border-radius:6px;overflow:hidden}
+video{width:100%;height:auto;display:block;aspect-ratio:16/9;background:#000}
+.film-note{max-width:1320px;margin:16px auto 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(251,251,245,.5)}
+
+/* ── generic blocks ───────────────────────────────────────── */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4.6vw,72px);align-items:start}
+.stack{display:flex;flex-direction:column;gap:clamp(18px,2vw,26px)}
+.eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:clamp(20px,2.6vw,34px)}
+
+/* pressure cards */
+.cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.pcard{background:var(--paper);border:1px solid rgba(37,37,35,.12);border-radius:12px;padding:24px 22px 26px;
+  display:flex;flex-direction:column;gap:9px;min-height:150px;justify-content:flex-end}
+.pcard .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--red)}
+.pcard .t{font-size:clamp(22px,2.2vw,30px);font-weight:700;letter-spacing:-.03em;line-height:1}
+.pcard .d{font-size:14px;color:var(--grey);line-height:1.45}
+
+/* the loop words */
+.loopwords{display:flex;flex-wrap:wrap;gap:10px}
+.loopwords span{font-family:var(--mono);font-size:clamp(12px,1.15vw,14px);letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid rgba(37,37,35,.26);border-radius:100px;padding:10px 18px}
+.loopwords span:nth-child(4n+1){background:var(--blue);color:var(--paper);border-color:var(--blue)}
+.loopwords span:nth-child(4n+3){background:var(--red);color:var(--paper);border-color:var(--red)}
+
+/* beats */
+.beats{display:flex;flex-direction:column;gap:clamp(26px,3.4vw,54px)}
+.beat{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:center}
+.beat:nth-child(even) .beat-img{order:2}
+.beat-img{border-radius:10px;overflow:hidden;background:rgba(37,37,35,.08);aspect-ratio:16/9}
+.beat-img img{width:100%;height:100%;object-fit:cover}
+.beat-txt{display:flex;flex-direction:column;gap:12px}
+.beat-txt .n{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--red);font-weight:600}
+.beat-txt h3{font-size:clamp(24px,2.7vw,38px);font-weight:700;letter-spacing:-.03em}
+.beat-txt p{color:var(--grey);font-size:15.5px;line-height:1.5;max-width:44ch}
+
+/* numbered process steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px}
+.step{background:var(--cream);border:1px solid rgba(37,37,35,.16);border-radius:12px;
+  padding:24px 22px 28px;display:flex;flex-direction:column;gap:8px;min-height:158px}
+.step .n{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;color:var(--blue);font-weight:600}
+.step .t{font-size:19px;font-weight:600;letter-spacing:-.02em}
+.step .d{font-size:14px;color:var(--grey);line-height:1.45}
+
+/* chloe */
+.chloe{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(26px,4vw,64px);align-items:center}
+.chloe-img{border-radius:12px;overflow:hidden;background:var(--blue);position:relative;
+  max-height:min(72vh,660px)}
+.chloe-img img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.traits{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:6px}
+.trait{border:1px solid rgba(37,37,35,.2);border-radius:10px;padding:14px 15px}
+.trait .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+.trait .v{font-size:15px;font-weight:500;margin-top:5px}
+
+/* location tags */
+.locs{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.loc{border-radius:12px;overflow:hidden;border:1px solid rgba(37,37,35,.14);background:var(--paper)}
+.loc .cap{padding:14px 16px 16px}
+.loc .cap .k{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.loc .cap .d{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-top:5px}
+.loc .sw{height:8px;background:var(--blue)}
+.loc:nth-child(2) .sw{background:var(--red)}
+.loc:nth-child(3) .sw{background:var(--amber)}
+.loc:nth-child(4) .sw{background:var(--mint)}
+
+/* reference sheets */
+.sheets{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(16px,2vw,28px)}
+.sheet{border:1px solid rgba(37,37,35,.14);border-radius:12px;overflow:hidden;background:var(--paper)}
+.sheet img{width:100%;height:auto}
+.sheet .cap{padding:14px 18px 18px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+
+/* claims */
+.claims{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(16px,2vw,28px);align-items:start}
+.claim{border-radius:12px;overflow:hidden;background:var(--paper);border:1px solid rgba(37,37,35,.14)}
+.claim img{width:100%;height:auto}
+.claim .cap{padding:16px 18px 20px}
+.claim .cap .t{font-size:17px;font-weight:600}
+.claim .cap .d{font-size:14px;color:var(--grey);margin-top:5px;line-height:1.45}
+
+/* loop diagram */
+.loopflow{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.loopflow .node{background:var(--dark);color:var(--paper);border-radius:100px;padding:13px 24px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.13em;text-transform:uppercase}
+.loopflow .node.alt{background:var(--blue)}
+.loopflow .arr{color:var(--grey);font-size:18px}
+
+/* outcome */
+.outcome{background:var(--blue);color:var(--paper)}
+.outcome h2{color:var(--paper)}
+.outcome .lead{color:rgba(251,251,245,.8)}
+.outcome .lead b{color:var(--paper)}
+.ocards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:clamp(28px,3.4vw,48px)}
+.ocard{background:rgba(251,251,245,.1);border:1px solid rgba(251,251,245,.22);border-radius:12px;padding:22px 20px 26px}
+.ocard .n{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;color:var(--mint);font-weight:600}
+.ocard .t{font-size:17px;font-weight:600;margin-top:9px;line-height:1.3}
+.outcome .mono{color:rgba(251,251,245,.66)}
+.outcome .tag.ghost{color:rgba(251,251,245,.8);border-color:rgba(251,251,245,.4)}
+
+/* pull quote */
+.pull{background:var(--dark);color:var(--paper);text-align:center}
+.pull q{display:block;font-size:clamp(28px,4.4vw,60px);font-weight:700;letter-spacing:-.035em;line-height:1.03;
+  max-width:19ch;margin:0 auto;quotes:none}
+.pull q .hi{color:var(--red)}
+.pull .mono{color:rgba(251,251,245,.55);margin-top:24px}
+
+/* end */
+.endnav{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(37,37,35,.14);border-top:1px solid rgba(37,37,35,.14)}
+.endnav a,.endnav div{background:var(--cream);padding:clamp(34px,4.4vw,64px) var(--pad);display:flex;flex-direction:column;gap:10px}
+.endnav .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--grey)}
+.endnav .v{font-size:clamp(24px,2.8vw,38px);font-weight:700;letter-spacing:-.03em}
+.endnav a:hover .v{color:var(--blue)}
+.colophon{padding:26px var(--pad) 40px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--grey);text-align:center}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero-r{min-height:420px}
+  .split,.beat,.chloe{grid-template-columns:1fr}
+  .beat:nth-child(even) .beat-img{order:0}
+  .endnav{grid-template-columns:1fr}
+  .bar{font-size:10.5px}
+  .bar .num,.bar .lbl,.bar .brand{padding:12px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <a class="back" href="index.html#works">
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 13L5 8l5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+    All work
+  </a>
+  <span class="who"><em>priya rawal</em> &nbsp;·&nbsp; Case study 01</span>
+</header>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-l">
+    <span class="tag">AI Workflow</span>
+    <span class="mono" style="margin-top:-14px">Cars24 Australia · brand film</span>
+    <h1>Option<br>Overload<span>ia</span></h1>
+    <p class="lead">Naming the thing every car buyer already does — <b>compare, reopen, doubt, delay</b> — and turning it into a 31-second film that ends in relief.</p>
+    <div class="loopwords" aria-hidden="true">
+      <span>Compare</span><span>Reopen</span><span>Doubt</span><span>Delay</span>
+    </div>
+  </div>
+  <div class="hero-r">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="disc">
+      <div>
+        <p class="a">not a car ad</p>
+        <p class="b">a mirror</p>
+      </div>
+    </div>
+    <div class="seal" aria-hidden="true"><span>3 sec<br>rule</span></div>
+  </div>
+</section>
+
+<div class="bar">
+  <span class="num">01</span>
+  <span class="lbl">The rule / outcome</span>
+  <span class="brand">Cars24 &nbsp;›</span>
+</div>
+
+<!-- ── META ─────────────────────────────────────────────── -->
+<dl class="meta">
+  <div><dt>Client</dt><dd>Cars24</dd></div>
+  <div><dt>Format</dt><dd>31-second brand film</dd></div>
+  <div><dt>Role</dt><dd>Senior Design Manager — strategy, world, character, prompt system, final cut</dd></div>
+  <div><dt>Made with</dt><dd>Higgsfield Supercomputer</dd></div>
+  <div><dt>Year</dt><dd>2026</dd></div>
+</dl>
+
+<!-- ── FILM ─────────────────────────────────────────────── -->
+<section class="film" id="film">
+  <div class="film-head">
+    <span class="tag red">The final film</span>
+    <span class="mono">1920 × 1080 · 31 sec · sound on</span>
+  </div>
+  <div class="film-wrap">
+    <video controls playsinline preload="metadata" poster="priya-assets/cars24/poster.jpg">
+      <source src="priya-assets/cars24/option-overloadia.mp4" type="video/mp4">
+      Your browser can’t play this video. <a href="priya-assets/cars24/option-overloadia.mp4">Download it instead.</a>
+    </video>
+  </div>
+  <p class="film-note">Every frame generated — no shoot, no crew, no location fee.</p>
+</section>
+
+<!-- ── 01 THE RULE ──────────────────────────────────────── -->
+<section class="pad rv">
+  <div class="eyebrow"><span class="tag">Analysis</span><span class="mono">The three-second rule</span></div>
+  <div class="split">
+    <h2>3 seconds<br>to feel seen.</h2>
+    <div class="stack">
+      <p class="lead">The first job is not to sell a car. It is to make the viewer think: <b>this is exactly how I decide.</b></p>
+      <p class="lead">Recognition earns the next twenty-eight seconds. Everything in the film is ordered around that — the joke lands before the brand does, and the claim only arrives once the problem is felt.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── 02 HUMAN TRUTH ───────────────────────────────────── -->
+<section class="pad rv" style="background:var(--paper);border-top:1px solid rgba(37,37,35,.12);border-bottom:1px solid rgba(37,37,35,.12)">
+  <div class="eyebrow"><span class="tag dark">Human psychology</span><span class="mono">Choice overload</span></div>
+  <div class="split" style="margin-bottom:clamp(28px,3.4vw,48px)">
+    <h2>More options.<br>Less confidence.</h2>
+    <p class="lead">Modern buyers are not short of choice. They are short of <b>relief from the pressure of making the perfect choice.</b> They are not asking for more inventory. They are asking for less pressure.</p>
+  </div>
+  <div class="cards3">
+    <div class="pcard"><span class="k">Compare</span><span class="t">More inputs</span><span class="d">Every extra tab adds information and subtracts certainty.</span></div>
+    <div class="pcard"><span class="k">Delay</span><span class="t">Less certainty</span><span class="d">The decision gets postponed rather than made.</span></div>
+    <div class="pcard"><span class="k">Reopen</span><span class="t">The same decision</span><span class="d">And the whole loop starts again from the top.</span></div>
+  </div>
+</section>
+
+<!-- ── PULL ─────────────────────────────────────────────── -->
+<section class="pad pull rv">
+  <q>It is funny because the <span class="hi">behaviour is true.</span></q>
+  <p class="mono">The hook device</p>
+</section>
+
+<!-- ── 03 BEATS ─────────────────────────────────────────── -->
+<section class="pad rv">
+  <div class="eyebrow"><span class="tag">Film beat map</span><span class="mono">Five beats, one cure arc</span></div>
+  <div class="split" style="margin-bottom:clamp(34px,4.4vw,64px)">
+    <h2>The idea became<br>a five-beat<br>cure arc.</h2>
+    <p class="lead">The finished film moves from comic overload to claim-backed calm: <b>attention first, then choice pressure, then the solution.</b></p>
+  </div>
+
+  <div class="beats">
+    <div class="beat rv">
+      <div class="beat-img"><img src="priya-assets/cars24/beat-1-diner.jpg" alt="A woman in a diner booth looks warily at two milkshakes she has to choose between." loading="lazy"></div>
+      <div class="beat-txt"><span class="n">Beat 01</span><h3>Diner hook</h3><p>Option Overloadia lands in the first three seconds. Two milkshakes, one person, and a decision that should be trivial.</p></div>
+    </div>
+    <div class="beat rv">
+      <div class="beat-img"><img src="priya-assets/cars24/beat-2-swipe.jpg" alt="A rapid sequence of outfit changes standing in for decision fatigue." loading="lazy"></div>
+      <div class="beat-txt"><span class="n">Beat 02</span><h3>Choice swipe</h3><p>Outfit changes become decision fatigue. The cutting speeds up as the certainty drops.</p></div>
+    </div>
+    <div class="beat rv">
+      <div class="beat-img"><img src="priya-assets/cars24/beat-3-overload.jpg" alt="A living room crowded with floating car listings and price cards." loading="lazy"></div>
+      <div class="beat-txt"><span class="n">Beat 03</span><h3>Option overload</h3><p>Car cards crowd the living-room world until the space itself is unusable. The pressure peaks here.</p></div>
+    </div>
+    <div class="beat rv">
+      <div class="beat-img"><img src="priya-assets/cars24/beat-4-claim.jpg?v=2" alt="The 30 Day Return Policy lockup, as it lands in the film." loading="lazy"></div>
+      <div class="beat-txt"><span class="n">Beat 04</span><h3>Claim relief</h3><p>Price Match and the 30-Day Return reduce the risk — the claims arrive as emotional relief, not as a feature list.</p></div>
+    </div>
+    <div class="beat rv">
+      <div class="beat-img"><img src="priya-assets/cars24/beat-5-ease.jpg" alt="Driving away — the decision has become movement." loading="lazy"></div>
+      <div class="beat-txt"><span class="n">Beat 05</span><h3>Mind at ease</h3><p>The decision becomes movement. No celebration, no hard sell — just someone who can finally go.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="bar">
+  <span class="num">02</span>
+  <span class="lbl">How it was made</span>
+  <span class="brand">Higgsfield Supercomputer &nbsp;›</span>
+</div>
+
+<!-- ── 04 SYSTEM ────────────────────────────────────────── -->
+<section class="pad rv" style="background:var(--paper)">
+  <div class="eyebrow"><span class="tag">Generation system</span><span class="mono">Brief → output</span></div>
+  <div class="split" style="margin-bottom:clamp(30px,3.6vw,52px)">
+    <h2>The brief is broken<br>into controllable<br>steps.</h2>
+    <p class="lead">This is how the process avoids one giant prompt. Each stage makes the film easier to <b>steer, compare, refine and expand</b> — a creative workflow layer rather than a single generator.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="n">01 · Brief</span><span class="t">Idea, audience, tone</span><span class="d">A point of view on the page before anything is generated.</span></div>
+    <div class="step"><span class="n">02 · Constants</span><span class="t">Character, world, camera</span><span class="d">The rules every shot has to obey.</span></div>
+    <div class="step"><span class="n">03 · Scenes</span><span class="t">Scene-level prompts</span><span class="d">Each beat written as its own mini brief.</span></div>
+    <div class="step"><span class="n">04 · Anchors</span><span class="t">Soul Character + tags</span><span class="d">Identity and place locked so they survive every render.</span></div>
+    <div class="step"><span class="n">05 · Variants</span><span class="t">Compare the routes</span><span class="d">Strongest options set side by side, not judged in isolation.</span></div>
+    <div class="step"><span class="n">06 · Context</span><span class="t">Feed winners back</span><span class="d">What worked becomes an input for the next pass.</span></div>
+    <div class="step"><span class="n">07 · Assets</span><span class="t">Clips and pitch visuals</span><span class="d">Film, stills and deck out of one pipeline.</span></div>
+  </div>
+</section>
+
+<!-- ── 05 CHLOE ─────────────────────────────────────────── -->
+<section class="pad rv">
+  <div class="eyebrow"><span class="tag">Soul Character</span><span class="mono">Same person, new shot</span></div>
+  <div class="chloe">
+    <div class="chloe-img"><img src="priya-assets/cars24/chloe.jpg" alt="Chloe — the film's Soul Character reference portrait." loading="lazy"></div>
+    <div class="stack">
+      <h2>The person needs<br>an identity anchor.</h2>
+      <p class="lead">Chloe holds the same emotional and visual DNA across every scene. Without a locked identity, a generated film quietly becomes <b>five different people in five different worlds.</b></p>
+      <div class="traits">
+        <div class="trait"><div class="k">Face identity</div><div class="v">Consistent across all beats</div></div>
+        <div class="trait"><div class="k">Styling language</div><div class="v">One wardrobe logic</div></div>
+        <div class="trait"><div class="k">Emotional tone</div><div class="v">Wry, not slapstick</div></div>
+        <div class="trait"><div class="k">Role clarity</div><div class="v">The buyer, never the brand</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 06 LOCATIONS ─────────────────────────────────────── -->
+<section class="pad rv" style="background:var(--paper);border-top:1px solid rgba(37,37,35,.12)">
+  <div class="eyebrow"><span class="tag dark">Location tags</span><span class="mono">Same story, connected worlds</span></div>
+  <div class="split" style="margin-bottom:clamp(26px,3.2vw,44px)">
+    <h2>The world needs<br>rules too.</h2>
+    <p class="lead">Place type, mood, props, architecture, time of day, lighting and repeated visual cues — <b>fixed per location</b>, so four environments still read as one film.</p>
+  </div>
+  <div class="locs">
+    <div class="loc"><div class="sw"></div><div class="cap"><div class="k">Diner</div><div class="d">First hook</div></div></div>
+    <div class="loc"><div class="sw"></div><div class="cap"><div class="k">Wardrobe</div><div class="d">Choice swipe</div></div></div>
+    <div class="loc"><div class="sw"></div><div class="cap"><div class="k">Living room</div><div class="d">Comparison loop</div></div></div>
+    <div class="loc"><div class="sw"></div><div class="cap"><div class="k">Car</div><div class="d">Decision relief</div></div></div>
+  </div>
+</section>
+
+<!-- ── 07 SHEETS ────────────────────────────────────────── -->
+<section class="pad rv">
+  <div class="eyebrow"><span class="tag">Visual grammar</span><span class="mono">Moodboard → language</span></div>
+  <div class="split" style="margin-bottom:clamp(26px,3.2vw,44px)">
+    <h2>A moodboard gave<br>the machine<br>a language.</h2>
+    <p class="lead">Instead of asking for a generic car film, each emotional beat was translated into a visual rule: <b>busy world, compressed choice, comic pressure, then calm certainty.</b></p>
+  </div>
+  <div class="sheets">
+    <div class="sheet"><img src="priya-assets/cars24/moodboard.jpg" alt="The design ingredients moodboard for the film." loading="lazy"><div class="cap">Design ingredients</div></div>
+    <div class="sheet"><img src="priya-assets/cars24/storyboard.jpg" alt="The storyboard laying out the film's beats." loading="lazy"><div class="cap">Storyboard</div></div>
+  </div>
+</section>
+
+<!-- ── 08 CLAIMS ────────────────────────────────────────── -->
+<section class="pad rv" style="background:var(--paper);border-top:1px solid rgba(37,37,35,.12)">
+  <div class="eyebrow"><span class="tag red">The claims</span><span class="mono">Risk removed, not features listed</span></div>
+  <div class="split" style="margin-bottom:clamp(26px,3.2vw,44px)">
+    <h2>Turn the claim into<br>emotional relief.</h2>
+    <p class="lead">The 30-Day Return is the big promise; Price Match is the practical confidence behind it. In the film they land as <b>the moment the pressure drops</b> — not as a bullet list.</p>
+  </div>
+  <div class="claims">
+    <div class="claim"><img src="priya-assets/cars24/claim-30day.jpg?v=2" alt="The 30-day return claim treatment." loading="lazy"><div class="cap"><div class="t">30-Day Return</div><div class="d">The emotional payoff — permission to change your mind.</div></div></div>
+    <div class="claim"><img src="priya-assets/cars24/claim-pmg.jpg?v=2" alt="The price match guarantee claim treatment." loading="lazy"><div class="cap"><div class="t">Price Match</div><div class="d">The practical proof that stops the comparing.</div></div></div>
+  </div>
+</section>
+
+<!-- ── 09 ITERATION ─────────────────────────────────────── -->
+<section class="pad rv">
+  <div class="eyebrow"><span class="tag">Iteration</span><span class="mono">Not one prompt and done</span></div>
+  <div class="split" style="margin-bottom:clamp(26px,3.2vw,42px)">
+    <h2>Every render<br>became feedback.</h2>
+    <p class="lead">Each pass was reviewed for consistency, character detail, scene logic, camera energy, and <b>how clearly the claim landed.</b> The taste check is the part that cannot be automated.</p>
+  </div>
+  <div class="loopflow">
+    <span class="node alt">Prompt</span><span class="arr">→</span>
+    <span class="node">Render</span><span class="arr">→</span>
+    <span class="node">Critique</span><span class="arr">→</span>
+    <span class="node alt">Refine</span><span class="arr">↻</span>
+  </div>
+</section>
+
+<!-- ── 10 OUTCOME ───────────────────────────────────────── -->
+<section class="pad outcome rv">
+  <div class="eyebrow"><span class="tag ghost">Outcome</span><span class="mono">Designer enablement</span></div>
+  <div class="split">
+    <h2>A visible pitch,<br>before production.</h2>
+    <p class="lead">A marketing designer can move from an idea to a film-like vision internally — then bring an agency in with <b>a stronger, sharper brief.</b></p>
+  </div>
+  <div class="ocards">
+    <div class="ocard"><span class="n">01</span><div class="t">Faster stakeholder buy-in</div></div>
+    <div class="ocard"><span class="n">02</span><div class="t">Fewer blind agency briefs</div></div>
+    <div class="ocard"><span class="n">03</span><div class="t">More claim-led film routes</div></div>
+    <div class="ocard"><span class="n">04</span><div class="t">Agency time used for scale and craft</div></div>
+  </div>
+</section>
+
+<!-- ── KEY LEARNINGS ────────────────────────────────────── -->
+<section class="pad rv" style="background:var(--paper);border-top:1px solid rgba(37,37,35,.12)">
+  <div class="eyebrow"><span class="tag dark">Key learnings</span><span class="mono">What I'd carry into the next one</span></div>
+  <div class="split" style="margin-bottom:clamp(26px,3.2vw,44px)">
+    <h2>The system is<br>the deliverable.</h2>
+    <p class="lead">The film was the visible output. The reusable part — a locked character, stable locations, a prompt structure and a review loop — is what makes <b>the second film cost a fraction of the first.</b></p>
+  </div>
+  <div class="cards3">
+    <div class="pcard"><span class="k">01</span><span class="t">Strategy first</span><span class="d">The tool only performs when the brief already has a point of view. A sharp deck beat a clever prompt every time.</span></div>
+    <div class="pcard"><span class="k">02</span><span class="t">Anchor before you scale</span><span class="d">Identity and location had to be locked early. Retrofitting consistency across finished shots is far more expensive.</span></div>
+    <div class="pcard"><span class="k">03</span><span class="t">Taste stays human</span><span class="d">Generation is cheap; judging which route lands the claim is the part that decides whether the film works.</span></div>
+  </div>
+</section>
+
+<div class="bar">
+  <span class="num">03</span>
+  <span class="lbl">End of case study</span>
+  <span class="brand">Option Overloadia &nbsp;›</span>
+</div>
+
+<nav class="endnav">
+  <a href="index.html#works">
+    <span class="k">← Back to</span>
+    <span class="v">All work</span>
+  </a>
+  <a href="noisefit-active-ii.html">
+    <span class="k">Next case study</span>
+    <span class="v">NoiseFit Active II</span>
+  </a>
+</nav>
+<p class="colophon">(© 2026 Priya Rawal · Option Overloadia for Cars24 Australia)</p>
+
+<script>
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold: 0.08, rootMargin: '0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

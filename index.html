@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="Priya Rawal, Senior Design Manager: brand and growth design for Cars24 Australia, the Option Overloadia AI film, launch identities for Noise and DailyObjects.">
+<link rel="canonical" href="https://priya-rawal-portfolio.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Priya Rawal">
+<meta property="og:url" content="https://priya-rawal-portfolio.github.io/">
+<meta property="og:title" content="Priya Rawal — Senior Design Manager, Cars24 Australia">
+<meta property="og:description" content="Brand and growth design at Cars24 Australia; wearables for Noise, accessories for DailyObjects.">
+<meta property="og:image" content="https://priya-rawal-portfolio.github.io/priya-assets/hero/priya-wide.jpg">
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="1013">
+<meta property="og:image:alt" content="Priya Rawal — Senior Design Manager, Cars24 Australia">
+<meta name="twitter:card" content="summary_large_image">
+<title>Priya Rawal — Senior Design Manager</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F6F6F6'/%3E%3Ctext x='16' y='24' font-size='24' text-anchor='middle' fill='%232B2B2B' font-family='Georgia,serif' font-style='italic'%3Ep%3C/text%3E%3C/svg%3E">
+<style>
+/* ── fonts ───────────────────────────────────────────────── */
+@font-face{font-family:"Editorial";src:url("priya-assets/fonts/editorial-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Editorial";src:url("priya-assets/fonts/editorial-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Editorial";src:url("priya-assets/fonts/editorial-ultrabold.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"Apfel";src:url("priya-assets/fonts/apfel-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Apfel";src:url("priya-assets/fonts/apfel-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+
+:root{
+  --canvas:#F6F6F6;
+  --ink:#2B2B2B;
+  --ink-80:rgba(43,43,43,.8);
+  --ink-60:rgba(43,43,43,.6);
+  --ink-40:rgba(43,43,43,.4);
+  --rule:rgba(43,43,43,.16);
+  --accent:#1B31E0;
+  --chrome-1:#FFFFFF;--chrome-2:#DFE3E9;--chrome-3:#9AA2AD;--chrome-4:#F2F4F7;
+  --serif:"Editorial",Georgia,"Times New Roman",serif;
+  --sans:"Apfel",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --pad:clamp(20px,3.4vw,72px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{
+  margin:0;background:var(--canvas);color:var(--ink);
+  font-family:var(--sans);font-size:14px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent);color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+
+.lbl{font-family:var(--sans);font-size:13px;line-height:1.5;letter-spacing:normal;text-transform:uppercase;color:var(--ink-80);margin:0}
+.ser{font-family:var(--serif);font-weight:400;margin:0}
+em,.it{font-style:italic}
+
+/* soft coral bloom */
+.bloom{position:absolute;border-radius:50%;pointer-events:none;
+  background:radial-gradient(closest-side,var(--accent) 0%,rgba(27,49,224,.42) 38%,rgba(27,49,224,0) 72%);
+  filter:blur(70px);opacity:.30;z-index:0}
+
+/* Custom cursor: an 8px dot replaces the native arrow, blended so it inverts on any ground.
+   Hover pointers only — never hide the cursor on touch or for reduced-motion users. */
+@media (hover:hover) and (pointer:fine){
+  html.has-dot,
+  html.has-dot body,
+  html.has-dot a,
+  html.has-dot button,
+  html.has-dot input,
+  html.has-dot textarea,
+  html.has-dot label,
+  html.has-dot *{cursor:none}
+}
+.cursor-dot{position:fixed;left:0;top:0;width:8px;height:8px;margin:-4px 0 0 -4px;
+  border-radius:100px;background:var(--canvas);mix-blend-mode:exclusion;
+  z-index:13;pointer-events:none;opacity:0;
+  transform:translate3d(-99px,-99px,0);will-change:transform;
+  transition:opacity .25s ease,width .25s ease,height .25s ease,margin .25s ease}
+.cursor-dot.on{opacity:1}
+.cursor-dot.big{width:26px;height:26px;margin:-13px 0 0 -13px}
+
+/* dingbats */
+.ding{position:absolute;color:var(--ink);opacity:.65;pointer-events:none;user-select:none;font-size:13px;line-height:1}
+/* the marks turn continuously (~7.8s) and breathe */
+@keyframes dingSpin{to{rotate:360deg}}
+@keyframes dingPulse{0%,100%{scale:1}50%{scale:1.42}}
+#hero .ding{display:inline-block;animation:dingSpin 7.8s linear infinite,dingPulse 3.2s ease-in-out infinite}
+
+/* ── nav ─────────────────────────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;
+  padding:19px clamp(20px,2.8vw,40px);mix-blend-mode:normal;transition:transform .28s cubic-bezier(.22,1,.36,1),opacity .28s}
+.nav.hide{transform:translateY(-120%);opacity:0}
+.nav .mark{font-family:var(--serif);font-style:italic;font-size:26px;letter-spacing:-.03em;line-height:1}
+.nav .links{display:flex;gap:clamp(14px,2.4vw,34px)}
+.nav .links a{font-size:13px;line-height:1.5;letter-spacing:normal;text-transform:uppercase;color:var(--ink-80);position:relative}
+/* the links are only ~20px tall; stretch the tappable area to 44px on touch
+   without shifting the type, which stays optically where it was. */
+@media (hover:none),(pointer:coarse){
+  .nav .links a{display:inline-flex;align-items:center;min-height:44px}
+  .nav .links a::after{bottom:11px}
+}
+.nav .links a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:currentColor;
+  transform:scaleX(0);transform-origin:right;transition:transform .28s cubic-bezier(.22,1,.36,1)}
+.nav .links a:hover::after,.nav .links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+
+/* ── hero ────────────────────────────────────────────────── */
+#hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:120px var(--pad) 64px;overflow:hidden}
+#hero .bloom{width:min(900px,120vw);height:min(760px,100vw);left:50%;bottom:-32%;transform:translateX(-50%)}
+.hero-type{position:relative;z-index:2;margin:0;display:flex;flex-direction:column;align-items:center;
+  font-family:var(--serif);font-size:clamp(34px,8.889vw,128px);line-height:1.06;letter-spacing:-.035em;color:var(--ink)}
+.hero-type span{display:block;white-space:nowrap}
+/* ragged composition: offsets locked to the type size */
+.hero-type .l1{transform:translateX(-.93em)}
+.hero-type .l2{transform:translateX(-.44em)}
+.hero-type .l3{transform:translateX(.48em)}
+.scrollcue{display:none}
+/* Shown only where the hero is two stacked screens — it is the cue that the
+   photo is the first of them. */
+@media (max-width:900px){
+  .desk-photo .scrollcue{display:block;position:absolute;z-index:3;left:0;right:0;
+    bottom:calc(52px + env(safe-area-inset-bottom));text-align:center;
+    color:rgba(255,255,255,.9);filter:drop-shadow(0 1px 4px rgba(0,0,0,.5))}
+  .desk-photo .scrollcue svg{display:inline-block}
+  .desk-photo .scrollcue .dot{animation:cuedrop 1.9s ease-in-out infinite}
+}
+@keyframes cuedrop{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(7px);opacity:.35}}
+@media (prefers-reduced-motion:reduce){.desk-photo .scrollcue .dot{animation:none}}
+
+/* ── works ───────────────────────────────────────────────── */
+#works{position:relative;display:grid;grid-template-columns:40% 60%;
+  border-top:1px solid var(--rule);align-items:start}
+.works-col{border-right:1px solid var(--rule);min-height:100%;padding:0 0 clamp(80px,12vw,180px)}
+.works-rail{position:sticky;top:clamp(88px,20vh,250px);align-self:start;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:52px;width:min(320px,80%);margin:0 auto;padding:0;text-align:center}
+.works-rail h2{font-family:var(--serif);font-style:italic;font-size:clamp(50px,6.944vw,100px);line-height:.80;letter-spacing:-.04em;margin:0}
+.works-rail .lbl{font-size:13px}
+.works-list{display:flex;flex-direction:column}
+
+.row{position:relative;height:400px;border-bottom:1px solid var(--rule);display:block;overflow:hidden;isolation:isolate}
+.row:first-child{border-top:1px solid var(--rule)}
+/* The cover is the artwork, full colour, edge to edge. */
+.row .shot{position:absolute;inset:0;z-index:0}
+.row .shot img{width:100%;height:100%;object-fit:cover;display:block;
+  transform:scale(1.03);transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.row:hover .shot img,.row:focus-within .shot img{transform:scale(1)}
+/* A dark scrim, only as strong as the white type needs to stay readable. */
+.row .shot::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(16,16,16,.62) 0%,rgba(16,16,16,.34) 26%,
+    rgba(16,16,16,.16) 52%,rgba(16,16,16,.40) 78%,rgba(16,16,16,.66) 100%)}
+
+/* Frosted glass strip across the top of the cover — the title sits on glass,
+   not on the photograph, so it reads at any brightness. */
+.row .head{position:absolute;z-index:2;left:0;right:0;top:0;
+  display:grid;grid-template-columns:auto auto 1fr;align-items:baseline;
+  column-gap:clamp(14px,1.4vw,26px);row-gap:2px;
+  padding:clamp(15px,1.5vw,28px) clamp(24px,2.2vw,52px) clamp(16px,1.6vw,30px);
+  background:rgba(243,244,246,.62);
+  -webkit-backdrop-filter:blur(20px) saturate(1.35);backdrop-filter:blur(20px) saturate(1.35);
+  border-bottom:1px solid rgba(43,43,43,.14)}
+.row .head .n,.row .head .t{font-family:var(--serif);font-size:clamp(24px,2.778vw,40px);
+  line-height:1.06;letter-spacing:-.06em;color:var(--ink)}
+.row .head .t{display:inline-flex;align-items:baseline;gap:.34em}
+.row .head .t::after{content:"→";font-family:var(--sans);font-size:.62em;
+  transform:translateX(0);transition:transform .34s cubic-bezier(.22,1,.36,1)}
+.row:hover .head .t::after,.row:focus-within .head .t::after{transform:translateX(.34em)}
+.row .head .m{grid-column:2;font-size:13px;line-height:1.5;letter-spacing:normal;
+  text-transform:uppercase;color:var(--ink-60)}
+
+.row .cta{position:absolute;z-index:2;left:32px;bottom:20px;display:flex;align-items:center;gap:10px;color:#fff;
+  font-family:var(--serif);font-size:clamp(17px,1.667vw,24px);line-height:1;letter-spacing:-.05em}
+.row .cta svg{width:18px;height:18px;opacity:0;transform:translateX(-6px);transition:opacity .22s,transform .22s cubic-bezier(.22,1,.36,1)}
+.row:hover .cta svg,.row:focus-within .cta svg{opacity:1;transform:translateX(0)}
+
+.badge{position:absolute;z-index:2;right:24px;bottom:18px;width:90px;height:90px;display:grid;place-items:center;color:#fff}
+.badge .ring{position:absolute;inset:0;animation:spin 22s linear infinite}
+.badge .ring text{font-family:var(--sans);font-size:8.4px;letter-spacing:.14em;text-transform:uppercase;fill:#fff}
+.badge .star{width:22px;height:22px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── about ───────────────────────────────────────────────── */
+#about{position:relative;display:grid;grid-template-columns:63.9% 36.1%;min-height:100svh;align-items:center;border-top:1px solid var(--rule)}
+.about-l{padding:clamp(48px,6vw,80px) clamp(20px,4vw,56px) clamp(48px,6vw,80px) clamp(20px,15.97vw,230px);
+  border-right:1px solid var(--rule);align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.about-l .lbl{font-size:16px;margin-bottom:clamp(26px,4vw,44px)}
+.about-l h3{font-family:var(--serif);font-size:clamp(46px,7.778vw,112px);line-height:1;letter-spacing:-.06em;margin:0}
+.about-r{padding:clamp(48px,6vw,80px) clamp(20px,3vw,40px) clamp(48px,6vw,80px) clamp(20px,2.6vw,37px);
+  display:flex;flex-direction:column;justify-content:center;gap:22px;position:relative}
+.about-r p{max-width:46ch;font-size:16px;line-height:1.5;color:var(--ink)}
+.about-r .ding{position:static;display:block;opacity:.6}
+
+/* ── testimonials ────────────────────────────────────────── */
+#testimonials{border-top:1px solid var(--rule);padding:clamp(64px,8.33vw,120px) clamp(20px,2.8vw,40px) clamp(88px,13vw,190px);text-align:center}
+#testimonials h2{font-family:var(--serif);font-size:clamp(44px,6.944vw,100px);line-height:.80;letter-spacing:-.04em;margin:22px 0 clamp(48px,6vw,80px)}
+.cards{columns:3;column-gap:22px;max-width:1240px;margin:0 auto;text-align:left}
+.card{break-inside:avoid;margin-bottom:22px;background:#fff;border-radius:14px;padding:26px 26px 22px;
+  border:1px solid rgba(43,43,43,.07)}
+.card p{font-size:13.5px;line-height:1.62;color:var(--ink-80);margin:0 0 14px}
+.card .who{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid rgba(43,43,43,.08);margin-top:4px}
+.card .av{width:38px;height:38px;border-radius:50%;background:rgba(43,43,43,.09);flex:none;display:grid;place-items:center;
+  font-family:var(--serif);font-size:16px;color:var(--ink-60)}
+.card .nm{font-size:13.5px;font-weight:500}
+.card .ro{font-size:12.5px;color:var(--ink-60)}
+.card .tbd{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-40)}
+
+/* ── contact ─────────────────────────────────────────────── */
+#contact{position:relative;border-top:1px solid var(--rule);padding:clamp(56px,8vw,96px) clamp(20px,2.8vw,40px) 0;overflow:hidden}
+#contact .bloom{width:min(860px,130vw);height:min(700px,110vw);left:38%;bottom:-42%;transform:translateX(-50%);opacity:.5}
+.contact-head{position:relative;z-index:2;text-align:center}
+.contact-head h2{font-family:var(--serif);font-style:italic;font-size:clamp(38px,7.361vw,106px);line-height:.90;letter-spacing:-.06em;margin:22px 0 0;max-width:20ch;margin-inline:auto}
+.contact-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,80px);
+  margin-top:clamp(48px,8vw,110px);align-items:start}
+.social h3{font-family:var(--serif);font-size:34px;letter-spacing:-.03em;margin:0 0 20px}
+.social ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:13px}
+.social ul a{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;color:var(--ink-80)}
+.social ul a:hover{color:var(--ink)}
+.social ul svg{width:15px;height:15px;flex:none}
+.social .mail{margin-top:clamp(40px,7vw,96px);font-family:var(--serif);font-size:clamp(20px,2vw,26px);letter-spacing:-.02em;display:inline-flex;align-items:center;gap:9px}
+
+form{display:flex;flex-direction:column;gap:26px}
+[hidden]{display:none!important}
+.field label{display:block;font-size:12.5px;color:var(--ink-80);margin-bottom:7px}
+.field input,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--ink-40);
+  padding:7px 0 11px;font-family:var(--sans);font-size:14px;color:var(--ink);resize:none}
+.field input::placeholder,.field textarea::placeholder{color:var(--ink-40)}
+.field input:focus,.field textarea:focus{outline:none;border-bottom-color:var(--ink)}
+form .submit{align-self:flex-end;background:transparent;border:0;cursor:pointer;
+  font-family:var(--serif);font-size:24px;letter-spacing:-.02em;color:var(--ink);display:inline-flex;align-items:center;gap:9px}
+form .submit:hover{opacity:.65}
+.colophon{position:relative;z-index:2;text-align:center;padding:clamp(40px,7vw,80px) 0 26px;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-80)}
+
+/* ── hero supporting line ────────────────────────────────── */
+.hero-sub{position:relative;z-index:2;margin-top:clamp(26px,3.4vw,44px);max-width:56ch;text-align:center;
+  font-size:15px;line-height:1.55;color:var(--ink-80)}
+.hero-sub b{color:var(--ink);font-weight:500}
+.hero-eyebrow{position:relative;z-index:2;margin-bottom:clamp(22px,3vw,40px);text-align:center}
+
+/* ── credibility strip ───────────────────────────────────── */
+#creds{border-top:1px solid var(--rule);padding:clamp(30px,3.6vw,52px) var(--pad)}
+#creds .lbl{text-align:center;font-size:13px;margin-bottom:clamp(18px,2.2vw,30px)}
+.credrow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:clamp(20px,4.4vw,68px)}
+.credrow a{font-family:var(--serif);font-size:clamp(20px,2.5vw,34px);line-height:1;
+  letter-spacing:-.035em;color:var(--ink);opacity:.62;position:relative;
+  transition:opacity .22s ease}
+.credrow a:hover,.credrow a:focus-visible{opacity:1;font-style:italic}
+.credrow a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:currentColor;
+  transform:scaleX(0);transform-origin:right;transition:transform .28s cubic-bezier(.22,1,.36,1)}
+.credrow a:hover::after,.credrow a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+
+/* ── project category tag ────────────────────────────────── */
+.row .head .cat{display:none}   /* .m already carries the discipline */
+.row .head .cat i{font-style:normal;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* ── shared section header ───────────────────────────────── */
+.sec-top{display:flex;flex-direction:column;gap:16px;margin-bottom:clamp(34px,4.4vw,62px);max-width:62ch}
+.sec-top h2{font-family:var(--serif);font-size:clamp(38px,5.6vw,80px);line-height:.86;letter-spacing:-.045em;margin:0}
+.sec-top p{font-size:16px;line-height:1.5;color:var(--ink-80);max-width:52ch}
+
+
+/* ── scroll reveal ───────────────────────────────────────── */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .42s cubic-bezier(.22,1,.36,1),transform .42s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ── responsive ──────────────────────────────────────────── */
+@media (max-width:900px){
+  #works{grid-template-columns:1fr}
+  .works-col{border-right:0;border-bottom:1px solid var(--rule);padding:0}
+  .works-rail{position:static;width:auto;margin:0;gap:26px;padding:clamp(48px,10vw,80px) var(--pad);align-items:flex-start;text-align:left}
+  #about{grid-template-columns:1fr}
+  .about-l{border-right:0;border-bottom:1px solid var(--rule)}
+  .cards{columns:2}
+  .contact-grid{grid-template-columns:1fr}
+  .row{height:320px}
+  .badge{width:74px;height:74px}
+}
+@media (max-width:600px){
+  .credrow{gap:16px 26px}
+  .cards{columns:1}
+  .row{height:280px}
+  .row .head{top:18px}
+  .row .head .m{width:100%}
+  .badge{display:none}
+  .hero-type{line-height:.88}
+  .hero-type .l1,.hero-type .l2,.hero-type .l3{transform:none}
+  .hero-photo{display:none}
+}
+/* No hover on touch — show the covers by default so phones don't get empty rows */
+@media (hover:none),(pointer:coarse){
+  .row .shot{filter:none}
+  .row .shot img{transform:none}
+  .row .cta svg{opacity:1;transform:none}
+}
+
+/* 320px-class phones: the 40px floor still clips "Building AI-powered" */
+@media (max-width:365px){
+  .hero-type{font-size:27px;letter-spacing:-.045em}
+  .hero-eyebrow,.hero-sub{font-size:13px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ── client logo grid ────────────────────────────────────────
+   Every mark is driven as a CSS mask, so one mechanism recolours all four —
+   grey at rest, the brand's own colour on hover — regardless of whether the
+   source file is vector or raster. Colours and files are first-party: each was
+   taken from that brand's own site or CDN. */
+#clients{border-top:1px solid var(--rule);padding:clamp(44px,6vw,84px) var(--pad)}
+.clients-lbl{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-60);
+  margin:0 0 clamp(26px,3.4vw,44px)}
+.logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:2px;overflow:hidden}
+.logo-cell{background:var(--canvas);display:grid;place-items:center;
+  padding:clamp(26px,3.6vw,44px) clamp(12px,2vw,26px);min-height:clamp(96px,11vw,142px);
+  transition:background .3s ease}
+.logo-cell:hover{background:#fff}
+.logo-cell .mk{display:block;width:100%;max-width:var(--w);height:var(--h);
+  background-color:var(--ink-40);
+  -webkit-mask:var(--src) center/contain no-repeat;mask:var(--src) center/contain no-repeat;
+  transition:background-color .32s ease}
+.logo-cell:hover .mk{background-color:var(--brand)}
+/* the four marks have very different proportions (4.9:1 down to 1.4:1), so each
+   gets its own optical height rather than one shared value */
+.logo-cell.c-cars24      {--src:url("priya-assets/logos/cars24.svg");      --brand:#4736FE;--h:clamp(20px,2.3vw,30px);--w:170px}
+.logo-cell.c-noise       {--src:url("priya-assets/logos/noise.svg");       --brand:#505AF0;--h:clamp(19px,2.2vw,29px);--w:132px}
+.logo-cell.c-dailyobjects{--src:url("priya-assets/logos/dailyobjects.svg");--brand:#20A87E;--h:clamp(20px,2.3vw,30px);--w:172px}
+.logo-cell.c-bombay      {--src:url("priya-assets/logos/bombay.png");      --brand:#040707;--h:clamp(50px,5.8vw,76px);--w:112px}
+@media (max-width:700px){ .logo-grid{grid-template-columns:repeat(2,1fr)} }
+@media (hover:none),(pointer:coarse){ .logo-cell .mk{background-color:var(--brand)} }
+
+/* ── the folder shelf, now its own section ───────────────── */
+#shelf{border-top:1px solid var(--rule);padding:clamp(48px,7vw,96px) var(--pad) clamp(56px,8vw,110px)}
+/* no max-width: the <br> in the markup sets the two lines, and a ch-based cap
+   was squeezing a two-line heading into six. */
+.shelf-head{margin:0 0 clamp(34px,4.4vw,60px)}
+.shelf-head h2{font-family:var(--serif);font-weight:400;margin:0;
+  font-size:clamp(30px,4.4vw,62px);line-height:1.02;letter-spacing:-.045em}
+.shelf-head h2 em{font-style:italic}
+/* the folders are the main navigation now, so let them use the full measure
+   rather than the 1000px cap they inherited from sitting inside the hero */
+#shelf .folders{max-width:none;margin-top:0;row-gap:clamp(38px,4vw,52px)}
+#shelf .folder .fbox{height:clamp(104px,10.5vw,150px)}
+#shelf .folder .nm{font-size:clamp(20px,1.9vw,27px)}
+/* two-line company names must not push their piece-count out of line */
+#shelf .folder .meta{min-height:62px}
+@media (max-width:900px){ #shelf .folder .meta{min-height:56px} }
+
+/* ── desk hero: photo, copy, and openable company folders ──── */
+#desk{position:relative;min-height:100svh;display:grid;align-items:center;
+  grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);
+  gap:clamp(24px,3.4vw,64px);padding:clamp(84px,9.5vh,120px) var(--pad) clamp(40px,6vh,72px);overflow:hidden}
+#desk .bloom{width:min(820px,110vw);height:min(700px,95vw);left:62%;bottom:-34%;transform:translateX(-50%);opacity:.30}
+.desk-copy{position:relative;z-index:3}
+.desk-copy .eyebrow{font-size:13px;text-transform:uppercase;color:var(--ink-80);margin:0 0 clamp(26px,3vw,44px)}
+.desk-copy h1{font-family:var(--serif);font-weight:400;margin:0;
+  font-size:clamp(40px,6.4vw,96px);line-height:1.12;letter-spacing:-.045em}
+.desk-copy h1 .l2{display:block;text-wrap:balance}
+.desk-copy h1 .l3{display:block;color:var(--ink-60);text-wrap:balance}
+.desk-copy h1 em{font-style:italic}
+/* the ⌘ cap, built to the chrome-and-blue reference: a blue key with a
+   brushed-silver glyph and a lit top edge */
+.key{display:inline-flex;align-items:center;justify-content:center;
+  min-width:.92em;padding:.06em .22em;margin:0 .04em;border-radius:.2em;
+  background:linear-gradient(168deg,#3A50FF 0%,var(--accent) 46%,#1226B4 100%);
+  font-family:var(--sans);font-size:.62em;line-height:1.25;vertical-align:.12em;letter-spacing:0;
+  box-shadow:inset 0 .06em 0 rgba(255,255,255,.55),inset 0 -.07em .1em rgba(0,0,0,.28),
+             0 .07em .16em rgba(18,38,180,.34);
+  color:transparent;background-clip:padding-box}
+.key i{font-style:normal;
+  background:linear-gradient(168deg,var(--chrome-1) 0%,var(--chrome-2) 38%,var(--chrome-3) 62%,var(--chrome-1) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 .02em .01em rgba(0,0,0,.35))}
+/* "AI" is the second key in the reference — brushed chrome with the letters
+   engraved into it. Flat silver text on a near-white page has no contrast;
+   as a key it has edges, so it reads. */
+.key.chrome{background:linear-gradient(168deg,#FDFDFE 0%,var(--chrome-2) 34%,var(--chrome-3) 60%,#F7F8FA 86%,var(--chrome-2) 100%);
+  box-shadow:inset 0 .06em 0 rgba(255,255,255,.9),inset 0 -.07em .1em rgba(90,98,110,.45),
+             inset 0 0 0 1px rgba(120,128,140,.35),0 .07em .16em rgba(80,88,100,.3)}
+.key.chrome i{background:none;color:#3A4048;
+  text-shadow:0 1px 0 rgba(255,255,255,.85),0 -1px 1px rgba(60,66,76,.4);
+  filter:none;letter-spacing:.02em}
+@supports not (background-clip:text){ .key i{color:var(--canvas);background:none} .key.chrome i{color:#3A4048} }
+.desk-sub{margin-top:clamp(30px,3.4vw,48px);max-width:46ch;font-size:15px;line-height:1.6;color:var(--ink-80)}
+
+.desk-photo{position:relative;z-index:2;justify-self:center;width:min(100%,clamp(300px,31vw,500px))}
+.desk-photo img{width:100%;height:auto;display:block;border-radius:2px;
+  box-shadow:0 40px 80px -30px rgba(43,43,43,.42),0 14px 28px -14px rgba(43,43,43,.26)}
+.desk-photo .cap{margin-top:12px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-40)}
+
+/* folders */
+.folders{grid-column:1 / -1;position:relative;z-index:3;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+  column-gap:clamp(16px,2.2vw,30px);
+  /* the rows need clearance: an open folder's cards rise ~40px out of the box and
+     would otherwise land on the label of the folder above it. */
+  row-gap:clamp(50px,4.6vw,58px);margin-top:clamp(22px,2.8vw,40px);max-width:1000px}
+.folder{position:relative;display:flex;flex-direction:column;gap:14px;text-align:left}
+.folder:hover,.folder:focus-within,.folder.peeking{z-index:2}
+.folder .fbox{position:relative;height:clamp(96px,8.2vw,116px);perspective:700px}
+/* back panel + tab */
+.folder .back{position:absolute;inset:auto 0 0 0;height:82%;border-radius:3px 10px 3px 3px;
+  background:linear-gradient(175deg,#E7E5E0,#DCDAD4);border:1px solid rgba(43,43,43,.14)}
+.folder .back::before{content:"";position:absolute;left:0;top:-11px;width:44%;height:12px;
+  border-radius:3px 8px 0 0;background:#E7E5E0;border:1px solid rgba(43,43,43,.14);border-bottom:0}
+/* the work peeking out */
+.folder .peek{position:absolute;left:8%;right:8%;bottom:26%;height:74%;
+  display:grid;place-items:end center}
+.folder .peek i{position:absolute;bottom:0;width:52%;height:100%;border-radius:2px;
+  background:#F4F3F0;border:1px solid rgba(43,43,43,.14);overflow:hidden;
+  box-shadow:0 6px 14px -8px rgba(43,43,43,.4);
+  transform-origin:50% 100%;
+  transition:transform .42s cubic-bezier(.22,1,.36,1)}
+.folder .peek i img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:filter .4s ease}
+.folder .peek i:nth-child(1){transform:translateY(-8%) rotate(-5deg)}
+.folder .peek i:nth-child(2){transform:translateY(-13%) rotate(0deg)}
+.folder .peek i:nth-child(3){transform:translateY(-8%) rotate(5deg)}
+/* front flap */
+.folder .front{position:absolute;inset:auto 0 0 0;height:64%;border-radius:3px 3px 4px 4px;
+  background:linear-gradient(180deg,#F0EEE9,#E3E1DB);border:1px solid rgba(43,43,43,.16);
+  transform-origin:50% 100%;
+  box-shadow:0 10px 20px -14px rgba(43,43,43,.5);
+  transition:transform .42s cubic-bezier(.22,1,.36,1)}
+.folder .fbox{transition:transform .42s cubic-bezier(.22,1,.36,1)}
+/* the open state — this is the affordance. .peeking is the same thing driven from
+   JS on touch devices, where there is no hover to reveal it. */
+.folder:hover .fbox,.folder:focus-visible .fbox,.folder.peeking .fbox{transform:translateY(-6px)}
+.folder:hover .front,.folder:focus-visible .front,.folder.peeking .front{transform:rotateX(38deg)}
+.folder:hover .peek i:nth-child(1),.folder:focus-visible .peek i:nth-child(1),.folder.peeking .peek i:nth-child(1){transform:translateY(-34%) rotate(-13deg)}
+.folder:hover .peek i:nth-child(2),.folder:focus-visible .peek i:nth-child(2),.folder.peeking .peek i:nth-child(2){transform:translateY(-44%) rotate(0deg)}
+.folder:hover .peek i:nth-child(3),.folder:focus-visible .peek i:nth-child(3),.folder.peeking .peek i:nth-child(3){transform:translateY(-34%) rotate(13deg)}
+.folder:hover .peek i img,.folder:focus-visible .peek i img,.folder.peeking .peek i img{filter:grayscale(0)}
+.folder .meta{display:flex;flex-direction:column;gap:3px;min-height:48px}
+.folder .nm{font-family:var(--serif);font-size:clamp(19px,1.6vw,23px);line-height:1.05;letter-spacing:-.035em}
+.folder:hover .nm,.folder:focus-visible .nm{font-style:italic}
+.folder.peeking .fbox{transform:translateY(-8px)}
+.folder .ct{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-40)}
+
+@media (max-width:900px){
+  /* On a phone the hero is two full screens, not one split one: the photo runs
+     edge to edge as the first thing you see, and the introduction is its own
+     screen underneath it. */
+  #desk{display:flex;flex-direction:column;min-height:0;padding:0;gap:0;overflow:visible}
+  #desk .bloom{display:none}
+  #desk > .ding{display:none}
+
+  .desk-photo{order:-1;width:100%;max-width:none;margin:0;justify-self:stretch;
+    height:100svh;min-height:520px;position:relative;overflow:hidden}
+  .desk-photo img{width:100%;height:100%;object-fit:cover;object-position:56% 42%;
+    border-radius:0;box-shadow:none}
+  /* the caption moves onto the image now that the image is the whole screen */
+  .desk-photo .cap{position:absolute;left:var(--pad);bottom:calc(20px + env(safe-area-inset-bottom));
+    margin:0;color:rgba(255,255,255,.92);text-shadow:0 1px 6px rgba(0,0,0,.45);z-index:2}
+  .desk-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:34%;pointer-events:none;
+    background:linear-gradient(to top,rgba(16,16,16,.5),transparent)}
+
+  .desk-copy{min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(72px,13vh,112px) var(--pad) clamp(52px,9vh,88px)}
+  .desk-copy h1{font-size:clamp(40px,11vw,66px)}
+
+  .folders{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Short laptop screens. This used to squeeze the folders into the first view;
+   they now live in their own section, so the hero only has to fit the headline,
+   one paragraph and a small photo — and the type can stay large. */
+@media (min-width:901px) and (max-height:960px){
+  #desk{padding-top:clamp(76px,8vh,100px);padding-bottom:clamp(30px,4vh,48px);gap:clamp(22px,3vw,48px)}
+  .desk-copy h1{font-size:clamp(34px,5.3vw,78px)}
+  .desk-photo{width:min(100%,clamp(280px,28vw,440px))}
+  .desk-sub{margin-top:22px;font-size:14.5px}
+  .desk-copy .eyebrow{margin-bottom:20px}
+}
+@media (min-width:901px) and (max-height:820px){
+  .desk-copy h1{font-size:clamp(30px,4.5vw,64px)}
+  .desk-photo{width:min(100%,clamp(250px,24vw,380px))}
+  .desk-copy .eyebrow{margin-bottom:16px}
+  .desk-sub{margin-top:18px}
+}
+
+/* ══════════════════════════════════════════════════════════════
+   LARGE-SCREEN SPEC
+   Every fluid value above was drawn at 1440 and stopped growing there,
+   so on a 4K display this was a 1440 design stretched across 3840px:
+   type left at its old size, boxes blown up to 2.5x their intended
+   shape. The worst of it was the case-study covers — a fixed 400px
+   height against a fluid width turned them into letterbox slivers
+   showing 37% of each photograph.
+
+   The fix is a 2240px shell (the artwork tops out at 1728x800, so
+   there is nothing to scale up to) plus a type ramp that resumes
+   above 1441px. Nothing below 1441px changes.
+   ══════════════════════════════════════════════════════════════ */
+:root{
+  --shell:2240px;
+  --gut:max(var(--pad),calc((100% - var(--shell))/2));
+  --bgut:max(0px,calc((100% - var(--shell))/2));
+}
+@media (min-width:1441px){
+  :root{
+    --fs-micro:clamp(11.5px,calc(.1458vw + 9.4px),15px);
+    --fs-label:clamp(13px,calc(.1667vw + 10.6px),17px);
+    --fs-body:clamp(15px,calc(.1667vw + 12.6px),19px);
+    --fs-lead:clamp(15px,calc(.375vw + 9.6px),24px);
+    --fs-title:clamp(27px,calc(.5417vw + 19.2px),40px);
+    --fs-cta:clamp(24px,calc(.6667vw + 14.4px),40px);
+    --fs-rowtitle:clamp(40px,calc(1vw + 25.6px),64px);
+    --fs-shelfh2:clamp(62px,calc(1.4167vw + 41.6px),96px);
+    --fs-display:clamp(106px,calc(2.5833vw + 68.8px),168px);
+    --fs-h1:clamp(92px,calc(2.4927vw + 56.3px),152px);
+    --fs-mark:clamp(26px,calc(.3333vw + 21.2px),34px);
+  }
+  body{font-size:var(--fs-body)}
+  .nav .mark{font-size:var(--fs-mark)}
+  .nav .links a,.desk-copy .eyebrow,.clients-lbl,.works-rail .lbl,
+  .about-l .lbl,.row .head .m,.row .head .cat{font-size:var(--fs-label)}
+  .desk-photo .cap,.folder .ct,.colophon{font-size:var(--fs-micro)}
+  .desk-sub{font-size:var(--fs-lead)}
+  .about-r p{font-size:var(--fs-body)}
+  .desk-copy h1{font-size:var(--fs-h1)}
+  .works-rail h2,.about-l h3,.contact-head h2{font-size:var(--fs-display)}
+  .shelf-head h2{font-size:var(--fs-shelfh2)}
+  .row .head .n,.row .head .t{font-size:var(--fs-rowtitle)}
+  .row .cta{font-size:var(--fs-cta)}
+  #shelf .folder .nm{font-size:var(--fs-title)}
+}
+/* short-screen tiers re-expressed as ratios so they still win */
+@media (min-width:1441px) and (max-height:960px){
+  .desk-copy h1{font-size:calc(var(--fs-h1) * .82)}
+}
+@media (min-width:1441px) and (max-height:820px){
+  .desk-copy h1{font-size:calc(var(--fs-h1) * .68)}
+}
+.desk-copy h1{max-width:10.5em}
+
+/* ── SHELL ─────────────────────────────────────────────────── */
+@media (min-width:901px){
+  .nav{padding-inline:max(var(--pad),calc((100% - var(--shell))/2))}
+  #desk,#clients,#shelf,#contact{padding-inline:var(--gut)}
+  #works,#about{padding-inline:var(--bgut)}
+  .colophon{padding-inline:var(--gut)}
+}
+
+/* ── HERO ──────────────────────────────────────────────────── */
+@media (min-width:1601px){
+  #desk{min-height:min(100svh,1400px);
+        grid-template-columns:minmax(0,1fr) clamp(286px,calc(52vw - 300px),980px);
+        gap:clamp(43px,calc(3.08vw - 6.3px),112px)}
+  .desk-photo{width:100%}
+  .desk-photo img{box-shadow:0 clamp(40px,2.6vw,100px) clamp(80px,5.2vw,200px) calc(-1 * clamp(30px,2vw,75px)) rgba(43,43,43,.42),
+                             0 clamp(14px,.9vw,35px) clamp(28px,1.8vw,70px) calc(-1 * clamp(14px,.9vw,35px)) rgba(43,43,43,.26)}
+  #desk .bloom{width:min(1500px,42vw);height:min(1250px,34vw);opacity:.34}
+}
+
+/* ── WORKS ─────────────────────────────────────────────────── */
+@media (min-width:901px){
+  .row{height:auto;aspect-ratio:54/25;min-height:400px}
+  .works-col{padding-bottom:0}
+}
+@media (min-width:1441px){
+  .works-rail{width:min(clamp(320px,calc(12.5vw + 80px),560px),80%);gap:clamp(52px,calc(1.4583vw + 24px),80px)}
+  .row .head{padding-inline:clamp(32px,calc(1.25vw + 8px),64px);
+             column-gap:clamp(20px,calc(.73vw + 6px),34px)}
+  .row .cta{left:clamp(32px,calc(1.25vw + 8px),56px);bottom:clamp(20px,calc(1.04vw),40px)}
+  .row .cta svg{width:clamp(18px,calc(.42vw + 10px),26px);height:clamp(18px,calc(.42vw + 10px),26px)}
+  .badge{width:clamp(90px,calc(3.125vw + 30px),150px);height:clamp(90px,calc(3.125vw + 30px),150px);
+         right:clamp(24px,calc(1.04vw + 4px),44px);bottom:clamp(18px,calc(.83vw + 2px),34px)}
+  .badge .star{width:clamp(22px,calc(.52vw + 14px),34px);height:clamp(22px,calc(.52vw + 14px),34px)}
+}
+
+/* ── SHELF ─────────────────────────────────────────────────── */
+@media (min-width:901px){
+  #shelf .folder .fbox{height:auto;aspect-ratio:209/100}
+  #shelf .folder .meta{min-height:clamp(62px,calc(.85vw + 49.8px),95px)}
+}
+@media (min-width:1441px){
+  #shelf .folders{column-gap:clamp(30px,calc(1vw + 15.6px),54px);
+                  row-gap:clamp(58px,calc(1.75vw + 32.8px),100px)}
+  .shelf-head{margin-bottom:clamp(60px,calc(3.2vw + 21px),130px)}
+}
+
+/* ── CLIENTS ───────────────────────────────────────────────── */
+@media (min-width:1441px){
+  #clients{padding-block:clamp(84px,calc(2.42vw + 49.2px),142px)}
+  .clients-lbl{margin-bottom:clamp(44px,calc(1.17vw + 27.2px),72px)}
+  .logo-cell{min-height:clamp(142px,11.5vw,240px)}
+  .logo-cell.c-cars24      {--h:clamp(30px,calc(.833vw + 18px),50px);--w:clamp(170px,calc(5.42vw + 92px),300px)}
+  .logo-cell.c-noise       {--h:clamp(29px,calc(.833vw + 17px),49px);--w:clamp(132px,calc(4.21vw + 71.4px),233px)}
+  .logo-cell.c-dailyobjects{--h:clamp(30px,calc(.833vw + 18px),50px);--w:clamp(172px,calc(5.46vw + 93.4px),303px)}
+  .logo-cell.c-bombay      {--h:clamp(76px,calc(1vw + 61.6px),100px);--w:clamp(112px,calc(1.58vw + 89.2px),150px)}
+}
+
+/* ── ABOUT / CONTACT ───────────────────────────────────────── */
+@media (min-width:1441px){ #about{min-height:min(100svh,900px)} }
+@media (min-width:1921px){ .about-l{padding-left:clamp(80px,calc(3.125vw + 20px),140px)} }
+@media (min-width:1441px){
+  #shelf{padding-block:clamp(96px,calc(2.92vw + 54px),166px) clamp(110px,calc(3.33vw + 62px),190px)}
+  #contact{padding-top:clamp(96px,calc(2.92vw + 54px),166px)}
+  .colophon{padding-block:clamp(80px,calc(2.58vw + 42.8px),142px) clamp(32px,calc(.63vw + 23px),47px)}
+}
+
+/* ── SCRIM (all widths) ────────────────────────────────────── */
+.row .shot::after{background:linear-gradient(180deg,
+  rgba(16,16,16,.80) 0%,rgba(16,16,16,.66) 20%,rgba(16,16,16,.40) 36%,
+  rgba(16,16,16,.14) 58%,rgba(16,16,16,.40) 80%,rgba(16,16,16,.68) 100%)}
+
+
+.row .shot img{transform:scale(1)}
+.row:hover .shot img,.row:focus-within .shot img{transform:scale(1.04)}
+
+/* ── affordances, focus and small fixes ────────────────────── */
+@media (min-width:1441px){
+  /* cursor:none deletes the browser's strongest affordance; give it back to
+     anything clickable, and make the dot a ring so it stops masking the logo
+     it is meant to be highlighting */
+  html.has-dot a,html.has-dot button,html.has-dot [role="button"]{cursor:pointer}
+  .cursor-dot.big{background:transparent;border:1.5px solid var(--canvas)}
+  :focus-visible{outline-width:3px;outline-offset:6px}
+}
+@media (prefers-contrast:more){html.has-dot,html.has-dot *{cursor:auto!important}.cursor-dot{display:none}}
+
+/* the phone's About reserved a whole screen for a label and three words */
+@media (max-width:900px){
+  #about{min-height:0}
+  .about-l{padding-block:clamp(48px,9vw,80px) clamp(34px,6vw,56px)}
+  .about-r{padding-block:0 clamp(48px,9vw,80px)}
+  .shelf-head{margin-bottom:clamp(44px,9vw,64px)}
+}
+/* the coral bloom sat well left of a centred headline on a wide screen */
+#contact .bloom{left:50%}
+/* the links get a 44px tap target on touch; the wordmark was missed */
+@media (hover:none),(pointer:coarse){.nav .mark{display:inline-flex;align-items:center;min-height:44px}}
+
+/* contact column */
+.social .awaiting{margin-top:18px;font-size:12px;color:var(--ink-40)}
+.social .mail.resume{margin-top:14px;font-size:clamp(15px,1.1vw,19px)}
+.contact-grid form .field{display:flex;flex-direction:column;gap:7px;margin-bottom:26px}
+.contact-grid form label{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-60)}
+.contact-grid form input,.contact-grid form textarea{font:inherit;color:var(--ink);background:transparent;
+  border:0;border-bottom:1px solid var(--rule);padding:9px 0;outline:0;resize:vertical}
+.contact-grid form input:focus,.contact-grid form textarea:focus{border-bottom-color:var(--accent)}
+.contact-grid form .submit{font-family:var(--serif);font-size:clamp(20px,1.6vw,28px);letter-spacing:-.03em;
+  background:none;border:0;padding:0;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:10px}
+.contact-grid form .submit:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="mark" href="#desk">priya</a>
+  <nav class="links">
+    <a href="#works">(Works)</a>
+    <a href="#about">(About)</a>
+    <a href="#contact">(Let’s connect)</a>
+  </nav>
+</header>
+
+<!-- ── DESK: photo, copy, company folders ──────────────── -->
+<section id="desk">
+  <div class="bloom"></div>
+  <span class="ding" style="left:6%;top:16%">✦</span>
+  <span class="ding" style="right:7%;bottom:16%">⁘</span>
+
+  <div class="desk-copy rv">
+    <p class="eyebrow">(Priya Rawal — Senior Design Manager)</p>
+    <h1>
+      Hi, I’m <em>Priya</em>.
+      <span class="l2">I design brands people notice.</span>
+      <span class="l3">Then <span class="key"><i>⌘</i></span> + <span class="key chrome"><i>AI</i></span> the visual system.</span>
+    </h1>
+    <p class="desk-sub">Eight years across consumer tech, D2C and global markets — currently leading
+      design for Cars24 Australia.</p>
+  </div>
+
+  <figure class="desk-photo rv" style="margin:0">
+    <span class="scrollcue" aria-hidden="true"><svg viewBox="0 0 16 26" width="14" height="22" fill="none"><rect x="1" y="1" width="14" height="24" rx="7" stroke="currentColor" stroke-width="1.3"/><circle class="dot" cx="8" cy="8" r="1.9" fill="currentColor"/></svg></span>
+    <img src="priya-assets/hero/priya-desk.jpg" alt="Priya Rawal at her desk in a blue blazer — Pantone chips, a laptop and a stack of brand books around her." fetchpriority="high" width="2200" height="2786">
+    <figcaption class="cap">(Gurgaon, India)</figcaption>
+  </figure>
+
+</section>
+
+<!-- ── CLIENTS ──────────────────────────────────────────── -->
+<section id="clients">
+  <p class="clients-lbl rv">(Brands I’ve designed for)</p>
+  <div class="logo-grid rv">
+    <div class="logo-cell c-cars24"><span class="mk" role="img" aria-label="Cars24"></span></div>
+    <div class="logo-cell c-noise"><span class="mk" role="img" aria-label="Noise"></span></div>
+    <div class="logo-cell c-dailyobjects"><span class="mk" role="img" aria-label="DailyObjects"></span></div>
+    <div class="logo-cell c-bombay"><span class="mk" role="img" aria-label="Bombay Shaving Company"></span></div>
+  </div>
+</section>
+
+<!-- ── WORKS ────────────────────────────────────────────── -->
+<section id="works">
+  <div class="works-col">
+  <div class="works-rail">
+    <span class="ding" style="position:static">✦</span>
+    <h2><em>selected<br>projects</em></h2>
+    <p class="lbl">(Three projects · brand, growth and AI systems)</p>
+    <span class="ding" style="position:static">⁘</span>
+  </div>
+  </div>
+
+  <div class="works-list" id="worksList">
+    <a class="row rv" href="option-overloadia.html" aria-label="Option Overloadia — AI Workflow">
+      <span class="shot"><img src="priya-assets/img/cars24-cover.jpg" alt="A woman in a diner booth facing two milkshakes, unable to choose."></span>
+      <span class="head"><span class="cat"><i>AI Workflow</i></span><span class="n">(01)</span><span class="t">Option Overloadia</span><span class="m">(Cars24 Australia · AI-generated brand film)</span></span>
+      <span class="badge" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 100 100"><defs><path id="c1" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs><text><textPath href="#c1">view case study &#160;·&#160; view case study &#160;·&#160;</textPath></text></svg>
+        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 6.2 5.2 10.8 12 12-6.8 1.2-11.4 5.8-12 12-.6-6.2-5.2-10.8-12-12C6.8 10.8 11.4 6.2 12 0z"/></svg>
+      </span>
+    </a>
+
+    <a class="row rv" href="noisefit-active-ii.html" aria-label="NoiseFit Active II — Art Direction">
+      <span class="shot"><img src="priya-assets/work/cover-activeii.jpg?v=2" alt="The NoiseFit Active II smartwatch shot in an old-money styling."></span>
+      <span class="head"><span class="cat"><i>Art Direction</i></span><span class="n">(02)</span><span class="t">NoiseFit Active II</span><span class="m">(Noise · smartwatch launch identity)</span></span>
+      <span class="badge" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 100 100"><text><textPath href="#c1">view case study &#160;·&#160; view case study &#160;·&#160;</textPath></text></svg>
+        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 6.2 5.2 10.8 12 12-6.8 1.2-11.4 5.8-12 12-.6-6.2-5.2-10.8-12-12C6.8 10.8 11.4 6.2 12 0z"/></svg>
+      </span>
+    </a>
+
+    <a class="row rv" href="voltride.html" aria-label="VoltRide — Brand Identity">
+      <span class="shot"><img src="priya-assets/work/cover-voltride.jpg?v=2" alt="The VoltRide wordmark on a screen with a glowing green electric car."></span>
+      <span class="head"><span class="cat"><i>Brand Identity</i></span><span class="n">(03)</span><span class="t">VoltRide</span><span class="m">(Concept · EV ride-sharing platform)</span></span>
+      <span class="badge" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 100 100"><text><textPath href="#c1">view case study &#160;·&#160; view case study &#160;·&#160;</textPath></text></svg>
+        <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c.6 6.2 5.2 10.8 12 12-6.8 1.2-11.4 5.8-12 12-.6-6.2-5.2-10.8-12-12C6.8 10.8 11.4 6.2 12 0z"/></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ── FOLDER SHELF ─────────────────────────────────────── -->
+<section id="shelf">
+  <div class="shelf-head rv">
+    <h2>Open a folder to view<br><em>the complete work.</em></h2>
+  </div>
+  <nav class="folders" id="folders" aria-label="Work by company">
+    <a class="folder" href="work-cars24.html" aria-label="Cars24 Australia — 7 pieces">
+      <span class="fbox">
+        <span class="back"></span>
+        <span class="peek"><i><img src="priya-assets/cars24/beat-1-diner.jpg" alt="" loading="lazy"></i><i><img src="priya-assets/cars24/beat-3-overload.jpg" alt="" loading="lazy"></i><i><img src="priya-assets/cars24/beat-5-ease.jpg" alt="" loading="lazy"></i></span>
+        <span class="front"></span>
+      </span>
+      <span class="meta"><span class="nm">Cars24 Australia</span><span class="ct">7 pieces</span></span>
+    </a>
+    <a class="folder" href="work-noise.html" aria-label="Noise — 8 pieces">
+      <span class="fbox">
+        <span class="back"></span>
+        <span class="peek"><i><img src="priya-assets/work/card-noise-01.jpg" alt="" loading="lazy"></i><i><img src="priya-assets/work/card-noise-02.jpg" alt="" loading="lazy"></i><i><img src="priya-assets/work/card-noise-04.jpg" alt="" loading="lazy"></i></span>
+        <span class="front"></span>
+      </span>
+      <span class="meta"><span class="nm">Noise</span><span class="ct">8 pieces</span></span>
+    </a>
+    <a class="folder" href="work-dailyobjects.html" aria-label="DailyObjects — 8 pieces">
+      <span class="fbox">
+        <span class="back"></span>
+        <span class="peek"><i><img src="priya-assets/work/card-dailyobjects-01.jpg" alt="" loading="lazy"></i><i><img src="priya-assets/work/card-dailyobjects-02.jpg" alt="" loading="lazy"></i><i><img src="priya-assets/work/card-dailyobjects-03.jpg" alt="" loading="lazy"></i></span>
+        <span class="front"></span>
+      </span>
+      <span class="meta"><span class="nm">DailyObjects</span><span class="ct">8 pieces</span></span>
+    </a>
+    <a class="folder" href="work-bombay.html" aria-label="Bombay Shaving Company — 9 pieces">
+      <span class="fbox">
+        <span class="back"></span>
+        <span class="peek"><i><img src="priya-assets/work/card-bombay-01.jpg" alt="" loading="lazy"></i><i><img src="priya-assets/work/card-bombay-02.jpg" alt="" loading="lazy"></i><i><img src="priya-assets/work/card-bombay-04.jpg" alt="" loading="lazy"></i></span>
+        <span class="front"></span>
+      </span>
+      <span class="meta"><span class="nm">Bombay Shaving Company</span><span class="ct">9 pieces</span></span>
+    </a>
+  </nav>
+</section>
+
+<!-- ── ABOUT ────────────────────────────────────────────── -->
+<section id="about">
+  <div class="about-l rv">
+    <p class="lbl">(Who am I)</p>
+    <h3>Brand<br>Systems<br>Scale</h3>
+  </div>
+  <div class="about-r rv">
+    <span class="ding">◊</span>
+    <!-- ▼ COPY GOES HERE — one <p> per paragraph, nothing else needed. -->
+    <span class="ding">⁘</span>
+  </div>
+</section>
+
+<!-- ── CONTACT ──────────────────────────────────────────── -->
+<section id="contact">
+  <div class="bloom"></div>
+  <div class="contact-head rv">
+    <h2>let’s create<br>something together</h2>
+  </div>
+
+  <!-- ═══ CONTACT — THREE VALUES STILL MISSING ═══════════════════════════
+       Fill CONTACT at the foot of this file with Priya's email and profile
+       URLs. Anything left blank hides itself, so the section is never showing
+       a dead link or a fake address. DO NOT PUBLISH until the email is set —
+       until then the form has nowhere to post and stays hidden.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <div class="contact-grid">
+    <div class="social rv">
+      <h3 class="ser">Social</h3>
+      <ul id="socialList">
+        <li data-key="behance" hidden><a><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg>Behance</a></li>
+        <li data-key="linkedin" hidden><a><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.6 4.76 6V21h-4v-5.5c0-1.3-.02-3-1.9-3-1.9 0-2.2 1.45-2.2 2.9V21h-4z"/></svg>LinkedIn</a></li>
+        <li data-key="instagram" hidden><a><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 3.3.15 4.8 1.7 5 5 .06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.15 3.3-1.7 4.8-5 5-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-3.3-.15-4.8-1.7-5-5C2.05 15.6 2 15.2 2 12s0-3.6.07-4.9c.15-3.3 1.7-4.8 5-5C8.4 2.05 8.8 2.2 12 2.2zm0 3.9a5.9 5.9 0 100 11.8 5.9 5.9 0 000-11.8zm0 9.7a3.8 3.8 0 110-7.6 3.8 3.8 0 010 7.6zm6.1-9.9a1.4 1.4 0 11-2.8 0 1.4 1.4 0 012.8 0z"/></svg>Instagram</a></li>
+        <li data-key="x" hidden><a><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6.2 22H3l7.3-8.3L2.4 2h6.4l4.4 5.9zm-1.1 18h1.7L7.3 3.8H5.5z"/></svg>X</a></li>
+      </ul>
+      <a class="mail" id="mailLink" hidden></a>
+      <a class="mail resume" id="resumeLink" hidden></a>
+      <p class="lbl awaiting" id="awaiting">(Contact details to be added)</p>
+    </div>
+
+    <form class="rv" id="contactForm" method="POST" hidden>
+      <div class="field"><label for="nm">Your Name</label><input id="nm" name="name" type="text" required autocomplete="name"></div>
+      <div class="field"><label for="em">Your Email</label><input id="em" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="ms">Your Message</label><textarea id="ms" name="message" rows="3" required></textarea></div>
+      <button class="submit" type="submit">Submit <span aria-hidden="true">&#10022;</span></button>
+    </form>
+  </div>
+
+  <p class="colophon">(© 2026 Priya Rawal)</p>
+</section>
+
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+
+<script>
+// Custom cursor dot — replaces the native arrow on hover-capable pointers.
+(() => {
+  const dot = document.getElementById('cursorDot');
+  const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  const calm = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if (!dot || !fine || calm) { if (dot) dot.remove(); return; }
+  document.documentElement.classList.add('has-dot');
+
+  const INTERACTIVE = 'a,button,input,textarea,label,[role="button"]';
+  addEventListener('pointermove', (e) => {
+    if (e.pointerType === 'touch') return;
+    dot.classList.add('on');
+    dot.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+    dot.classList.toggle('big', !!(e.target.closest && e.target.closest(INTERACTIVE)));
+  }, {passive: true});
+  // hide it when the pointer leaves the window, so it can't sit stranded at an edge
+  addEventListener('pointerout', (e) => { if (!e.relatedTarget) dot.classList.remove('on'); });
+  addEventListener('blur', () => dot.classList.remove('on'));
+})();
+
+// Cursor-following photo tile — hover pointers only, and never under reduced motion.
+/* the cursor-following photo tile was removed — not wanted on desktop */
+
+// scroll reveal
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold: 0.01, rootMargin: '0px 0px 14% 0px'});
+document.querySelectorAll('.rv').forEach((el, i) => {
+  el.style.transitionDelay = (Math.min(i, 3) * 28) + 'ms';
+  io.observe(el);
+});
+
+// hide the nav on scroll down, show on scroll up
+const nav = document.getElementById('nav');
+let last = 0;
+addEventListener('scroll', () => {
+  const y = scrollY;
+  nav.classList.toggle('hide', y > 140 && y > last);
+  last = y;
+}, {passive: true});
+
+// the form has no backend yet — say so rather than pretending it sent
+/* contact form handler removed with the form — see the CONTACT block above */
+
+// Fast in-page navigation. The browser's own smooth scroll takes ~1.7s across
+// this page; this lands in ~420ms with the same easing feel.
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const h = a.getAttribute('href');
+    if (!h || h === '#') return;          // querySelector('#') throws
+    const el = document.querySelector(h);
+    if (!el) return;
+    e.preventDefault();
+    if (matchMedia('(prefers-reduced-motion:reduce)').matches) { el.scrollIntoView(); return; }
+    const navEl = document.getElementById('nav');
+    const start = scrollY, t0 = performance.now();
+    const end = el.getBoundingClientRect().top + scrollY - (navEl ? navEl.offsetHeight : 0);
+    const ease = t => 1 - Math.pow(1 - t, 3);
+    (function step(now){
+      const t = Math.min((now - t0) / 420, 1);
+      scrollTo(0, start + (end - start) * ease(t));
+      if (t < 1) requestAnimationFrame(step);
+    })(t0);
+  });
+});
+</script>
+<script>
+/* ── folders that open themselves on touch ───────────────────
+   A phone has no hover, so the folders have to volunteer the fact that they open:
+   a wave across all five when the page settles, then one at a time at irregular
+   intervals. Only while they are actually on screen, and never for anyone who has
+   asked for reduced motion. Desktop is left alone — the cursor already does this. */
+(() => {
+  const wrap = document.getElementById('folders');
+  if (!wrap) return;
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  if (matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+  const folders = [...wrap.querySelectorAll('.folder')];
+  if (!folders.length) return;
+
+  const HOLD = 1150;
+  let visible = false, timer = null, greeted = false, last = -1;
+
+  const peek = el => {
+    el.classList.add('peeking');
+    setTimeout(() => el.classList.remove('peeking'), HOLD);
+  };
+  const tick = () => {
+    if (!visible) { timer = null; return; }
+    let wait;
+    if (!greeted) {
+      greeted = true;
+      folders.forEach((f, i) => setTimeout(() => peek(f), i * 180));
+      wait = folders.length * 180 + HOLD + 800;
+    } else {
+      let i = Math.floor(Math.random() * folders.length);
+      if (i === last && folders.length > 1) i = (i + 1) % folders.length;
+      last = i;
+      peek(folders[i]);
+      wait = HOLD + 1200 + Math.random() * 1800;
+    }
+    timer = setTimeout(tick, wait);
+  };
+  const stop = () => { clearTimeout(timer); timer = null; };
+  const go = d => { if (visible && !timer) timer = setTimeout(tick, d); };
+
+  new IntersectionObserver(es => {
+    visible = es[0].isIntersecting;
+    visible ? go(600) : stop();
+  }, {threshold: .2}).observe(wrap);
+
+  addEventListener('pagehide', stop);
+  document.addEventListener('visibilitychange', () => document.hidden ? stop() : go(500));
+})();
+</script>
+<script>
+/* ── CONTACT ────────────────────────────────────────────────────
+   The only place contact details live. Fill a value and it appears;
+   leave it blank and nothing renders — no dead links, no fake address. */
+const CONTACT = {
+  email:     '',   // e.g. 'priya@…'  — also wires the form via formsubmit.co
+  behance:   '',
+  linkedin:  '',
+  instagram: '',
+  x:         '',
+  resume:    '',   // e.g. 'priya-assets/priya-rawal-cv.pdf'
+};
+(() => {
+  let shown = 0;
+  document.querySelectorAll('#socialList li[data-key]').forEach(li => {
+    const url = CONTACT[li.dataset.key];
+    if (!url) return;
+    li.querySelector('a').href = url;
+    li.querySelector('a').rel = 'me noopener';
+    li.hidden = false; shown++;
+  });
+  const mail = document.getElementById('mailLink');
+  if (CONTACT.email) {
+    mail.href = 'mailto:' + CONTACT.email;
+    mail.textContent = CONTACT.email;
+    mail.hidden = false; shown++;
+    const f = document.getElementById('contactForm');
+    f.action = 'https://formsubmit.co/' + CONTACT.email;
+    f.hidden = false;
+  }
+  const cv = document.getElementById('resumeLink');
+  if (CONTACT.resume) { cv.href = CONTACT.resume; cv.textContent = 'Résumé ↗'; cv.hidden = false; shown++; }
+  document.getElementById('awaiting').hidden = shown > 0;
+  document.querySelector('.social h3').hidden = shown === 0;
+})();
+</script>
+</body>
+</html>
